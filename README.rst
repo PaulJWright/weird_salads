@@ -1,4 +1,39 @@
+Overview
+--------
 
+To get started, you can install the package and use it as follows:
+
+.. code:: bash
+
+    pip install -e .
+
+Then you can import the utility functions in your Python script:
+
+.. code:: python
+
+    import mad_salads
+
+This codebase uses pre-commit etc.
+
+.. code:: bash
+
+    pre-commit install
+
+.. code:: bash
+
+    (weird_salads) ➜  mad_salads git:(feature/initial_setup) ✗ pre-commit run --all
+    ruff.....................................................................Passed
+    black....................................................................Passed
+    isort....................................................................Passed
+    check python ast.........................................................Passed
+    check for case conflicts.................................................Passed
+    trim trailing whitespace.................................................Passed
+    check yaml...............................................................Passed
+    debug statements (python)................................................Passed
+    check for added large files..............................................Passed
+    fix end of files.........................................................Passed
+    mixed line ending........................................................Passed
+    codespell................................................................Passed
 
 
 License
