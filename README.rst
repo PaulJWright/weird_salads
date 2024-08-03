@@ -11,7 +11,7 @@ Then you can import the utility functions in your Python script:
 
 .. code:: python
 
-    import mad_salads
+    import weird_salads
 
 This codebase uses pre-commit etc.
 
