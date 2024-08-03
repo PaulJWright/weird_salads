@@ -10,8 +10,8 @@ except Exception:
     import warnings
 
     warnings.warn(
-        f'could not determine {__name__.split(".")[0]} package version; this indicates a broken installation'
+        f'could not determine {__name__.split(".")[0]} package version; this indicates a broken installation'  # noqa: 501
     )
     del warnings
 
-    version = '0.0.0'
+    version = "0.0.0"
