@@ -1,0 +1,90 @@
+[build-system]
+requires = [
+  "setuptools>=62.1",
+  "setuptools_scm[toml]>=6.2",
+  "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weird_salads"
+description = ""
+requires-python = ">=3.10"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { file = "licenses/LICENSE.rst" }
+authors = [
+  { name = "Paul Wright", email = "pauljwright.phd@gmail.com" },
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.scripts]
+open_astronomy_package_template_example = "weird_salads.example_mod:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-doctestplus",
+    "pytest-cov"
+]
+docs = [
+    "sphinx",
+    "sphinx-automodapi",
+]
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["weird_salads._dev*"]
+
+[tool.setuptools_scm]
+write_to = "weird_salads/_version.py"
+
+[tool.pytest.ini_options]
+testpaths = [
+  "weird_salads",
+  "docs",
+]
+doctest_plus = "enabled"
+text_file_format = "rst"
+addopts = "--doctest-rst"
+
+[tool.coverage.run]
+omit = [
+ "weird_salads/__init*",
+ "weird_salads/conftest.py",
+ "weird_salads/*setup_package*",
+ "weird_salads/tests/*",
+ "weird_salads/*/tests/*",
+ "weird_salads/extern/*",
+ "weird_salads/version*",
+ "*/weird_salads/__init*",
+ "*/weird_salads/conftest.py",
+ "*/weird_salads/*setup_package*",
+ "*/weird_salads/tests/*",
+ "*/weird_salads/*/tests/*",
+ "*/weird_salads/extern/*",
+ "*/weird_salads/version*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  # Have to re-enable the standard pragma
+  "pragma: no cover",
+  # Don't complain about packages we have installed
+  "except ImportError",
+  # Don't complain if tests don't hit assertions
+  "raise AssertionError",
+  "raise NotImplementedError",
+  # Don't complain about script hooks
+  "def main(.*):",
+  # Ignore branches that don't pertain to this version of Python
+  "pragma: py{ignore_python_version}",
+  # Don't complain about IPython completion helper
+  "def _ipython_key_completions_",
+  # typing.TYPE_CHECKING is False at runtime
+  "if TYPE_CHECKING:",
+  # Ignore typing overloads
+  "@overload",
+]
