@@ -29,6 +29,7 @@ Below is the proposed directory structure for the `weird_salads` project:
     │   │   ├── schemas/
     │   │   │   ├── orders_schema.py    # Orders Pydantic schemas
     │   │   │   └── inventory_schema.py # Inventory Pydantic schemas
+    │   │   └── ...
     │   ├── inventory/                  # Inventory module
     │   │   ├── inventory_service/      # Business logic
     │   │   │   ├── exceptions.py       # inventory-specific exceptions
@@ -50,6 +51,7 @@ Below is the proposed directory structure for the `weird_salads` project:
     │   │   │   ├── orders_repository.py
     │   │   │   ├── models.py
     │   │   │   └── ...
+    │   │   └── ...
     │   ├── streamlit_app/              # Streamlit frontend
     │   ├── tests/                      # Unit and integration tests
     │   ├── utils/                      # Shared utility functions
