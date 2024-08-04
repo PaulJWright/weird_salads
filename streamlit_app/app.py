@@ -4,8 +4,9 @@ import streamlit as st
 st.title("Streamlit App")
 
 # Try to get a response from FastAPI
+# now from order
 try:
-    response = requests.get("http://fastapi:8000")
+    response = requests.get("http://fastapi:8000/order/")
     response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
     data = response.json()
 
