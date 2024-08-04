@@ -4,7 +4,6 @@ Pydantic Schemas for API
 
 from datetime import datetime
 from typing import List
-from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -18,7 +17,7 @@ class CreateOrderSchema(BaseModel):
 
 
 class GetOrderSchema(CreateOrderSchema):
-    id: UUID  # should this be a string because SQLite?
+    id: str  # changed to str (of UUID) to match how it is stored in SQLite
     created: datetime
 
     class Config:
