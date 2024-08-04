@@ -14,11 +14,18 @@ license = { file = "licenses/LICENSE.rst" }
 authors = [
   { name = "Paul Wright", email = "pauljwright.phd@gmail.com" },
 ]
-dependencies = []
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "sqlalchemy",
+  "alembic",
+  "pydantic",
+  "requests",
+  "pandas",
+  "numpy",
+  "pyaml",
+]
 dynamic = ["version"]
-
-[project.scripts]
-open_astronomy_package_template_example = "weird_salads.example_mod:main"
 
 [project.optional-dependencies]
 test = [
