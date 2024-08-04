@@ -33,7 +33,7 @@ The requirements state:
 and as such, an initial API design is below:
 
 .. image:: ../docs/misc/api_design.jpg
-  :alt: API Design Doc
+  :alt: API design
 
 where to
 
@@ -45,6 +45,24 @@ where to
         - total revenue from all sales: GET /orders with filters on `delivery_date`
         - total value of current inventory: GET /inventory
         - cost of all recorded waste: **NOT IMPLEMENTED**
+
+Database Design
+===============
+
+There are a number of tables in the provided, and the requirements state:
+
+    Each location has its own menu and inventory needs. The application should restrict all actions to the recipes and ingredients on the location's menu, and to the staff employed at that specific location.
+    [...] When the stores open for business next time, **they will boot up your app and see their latest data and be ready to use by the staff**.
+    Keep in mind that restaurant staff are very busy and typically not very technical - people will be performing any or all of these tasks at the same time and often under pressure.
+
+With the bold in mind, we can seed the database, and simplify the provided excel sheet, e.g.:
+
+.. image:: ..docs/misc/db_design.jpg
+  :alt: Database design
+
+.. note::
+
+    The thought was to possibly start with SQLite for simplicity of storing as a `.db` file, but as this doesn't deal with UUID we need str(UUID) (as reflected in the above design diagram)
 
 
 Repository Design
