@@ -14,10 +14,14 @@ class UnitOfWork:
         return self
 
     def __exit__(self, exc_type, exc_val, traceback):
-        if exc_type is not None:
-            self.rollback()
+        try:
+            if exc_type is not None:
+                self.rollback()
+        finally:
             self.session.close()
-        self.session.close()
+
+        if exc_type is not None:
+            raise exc_val
 
     def commit(self):
         self.session.commit()
