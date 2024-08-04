@@ -1,5 +1,6 @@
 Overview
 --------
+Potential Technologies:
 
 * api (FastAPI)
 * data [small data files (if needed), probably where the SQLite DB will be stored...]
@@ -9,8 +10,13 @@ Overview
 * streamlit_app (streamlit frontend)
 * tests [openastronomy location for tests]
 
+API Design
+==========
 
-Repository Layout
+.. image:: ../docs/misc/api_design.jpg
+  :alt: API Design Doc
+
+Repository Design
 =================
 
 Below is the proposed directory structure for the `weird_salads` project:
@@ -47,7 +53,6 @@ Below is the proposed directory structure for the `weird_salads` project:
     │   │   │   ├── orders_service.py
     │   │   │   └── orders.py
     │   │   ├── repository/
-    │   │   │   ├── __init__.py
     │   │   │   ├── orders_repository.py
     │   │   │   ├── models.py
     │   │   │   └── ...
