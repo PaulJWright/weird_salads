@@ -60,9 +60,8 @@ With the bold in mind, we can seed the database, and simplify the provided excel
 .. image:: ../docs/misc/db_design.jpg
   :alt: Database design
 
-.. note::
 
-    The thought was to possibly start with SQLite for simplicity of storing as a `.db` file, but as this doesn't deal with UUID we need str(UUID) (as reflected in the above design diagram)
+NB: The thought was to possibly start with SQLite for simplicity of storing as a `.db` file, but as this doesn't deal with UUID we need str(UUID) (as reflected in the above design diagram)
 
 
 Repository Design
