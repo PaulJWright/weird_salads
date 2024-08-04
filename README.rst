@@ -9,13 +9,13 @@ To get started, run the following (for a full breakdown, see `/docker/README.rst
 
 .. code:: bash
 
-        cd docker
-        docker compose up --build
+    cd docker
+    docker compose up --build
 
+* FastAPI can be accessed at http://localhost:8000 (command line example below),
+* and Streamlit front-end at http://localhost:8501
 
-FastAPI can be accessed at http://localhost:8000 (example below), and Streamlit at http://localhost:8501
-
-... code:: bash
+.. code:: bash
 
     curl -X 'GET' 'http://localhost:8000/' -H 'accept: application/json'
     {"Hello":"World"}

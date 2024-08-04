@@ -43,10 +43,12 @@ The Docker output should indicate that both the FastAPI and Streamlit containers
 
 with FastAPI @ http://localhost:8000 and Streamlit @ http://localhost:8501
 
+
 The containers can be viewed with `docker ps`:
 
 .. code:: bash
-(fastapi_demo) ➜  weird_salads docker ps
+
+    (fastapi_demo) ➜  weird_salads docker ps
     CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                    NAMES
     6ce0716175e8   docker-streamlit   "streamlit run app.py"   About a minute ago   Up About a minute   0.0.0.0:8501->8501/tcp   docker-streamlit-1
     6f168d52906d   docker-fastapi     "sleep 365d"             About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   docker-fastapi-1
@@ -83,7 +85,7 @@ pSQL is a bit of a pain adding complexity, so SQLite instead...
     restart: always
 
 
-I also shouldn't have made this pip installable as scm_setuptools causes havok, see below:
+I also shouldn't have made this pip installable as `setuptools_scm` causes havok, see below:
 
 .. code:: bash
 
