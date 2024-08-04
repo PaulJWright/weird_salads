@@ -1,6 +1,9 @@
 Overview
 --------
+
+
 Potential Technologies:
+=======================
 
 * api (FastAPI)
 * data [small data files (if needed), probably where the SQLite DB will be stored...]
@@ -9,6 +12,7 @@ Potential Technologies:
 * order [deals with the order tasks]
 * streamlit_app (streamlit frontend)
 * tests [openastronomy location for tests]
+
 
 API Design
 ==========
