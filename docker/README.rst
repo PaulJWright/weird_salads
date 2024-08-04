@@ -49,9 +49,9 @@ The containers can be viewed with `docker ps`:
 .. code:: bash
 
     (fastapi_demo) ➜  weird_salads docker ps
-    CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                    NAMES
-    6ce0716175e8   docker-streamlit   "streamlit run app.py"   About a minute ago   Up About a minute   0.0.0.0:8501->8501/tcp   docker-streamlit-1
-    6f168d52906d   docker-fastapi     "sleep 365d"             About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp   docker-fastapi-1
+    CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS          PORTS                    NAMES
+    26ac8336f200   docker-streamlit   "streamlit run app.py"   26 minutes ago   Up 26 minutes   0.0.0.0:8501->8501/tcp   docker-streamlit-1
+    46a27116e6c7   docker-fastapi     "sh -c 'alembic upgr…"   26 minutes ago   Up 26 minutes   0.0.0.0:8000->8000/tcp   docker-fastapi-1
 
 
 Notes
