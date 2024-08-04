@@ -1,9 +1,9 @@
 Overview
---------
+========
 
 
 Potential Technologies:
-=======================
+-----------------------
 
 * api (FastAPI)
 * data [small data files (if needed), probably where the SQLite DB will be stored...]
@@ -35,20 +35,20 @@ and as such, an initial API design is below:
 .. image:: ../docs/misc/api_design.jpg
   :alt: API Design Doc
 
-where to
+where to,
 
-    - **Accept deliveries**: POST /inventory
-    - **Sell items**: POST /orders
-    - **Take stock**: GET /inventory
-    - **Pull reports**:
-        - total cost of all deliveries: POST /inventory with filters on `delivery_date`
-        - total revenue from all sales: GET /orders with filters on `delivery_date`
-        - total value of current inventory: GET /inventory
-        - cost of all recorded waste: **NOT IMPLEMENTED**
+- **Accept deliveries**: POST /inventory
+- **Sell items**: POST /orders
+- **Take stock**: GET /inventory
+- **Pull reports**:
+    - total cost of all deliveries: POST /inventory with filters on `delivery_date`
+    - total revenue from all sales: GET /orders with filters on `delivery_date`
+    - total value of current inventory: GET /inventory
+    - cost of all recorded waste: **NOT IMPLEMENTED**
 
 
 Repository Design
-=================
+-----------------
 
 Below is the proposed directory structure for the `weird_salads` project:
 
