@@ -57,7 +57,7 @@ There are a number of tables in the provided, and the requirements state:
 
 With the bold in mind, we can seed the database, and simplify the provided excel sheet, e.g.:
 
-.. image:: ..docs/misc/db_design.jpg
+.. image:: ../docs/misc/db_design.jpg
   :alt: Database design
 
 .. note::
