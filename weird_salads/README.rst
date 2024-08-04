@@ -48,7 +48,7 @@ where to,
 
 
 Repository Design
------------------
+=================
 
 Below is the proposed directory structure for the `weird_salads` project:
 
