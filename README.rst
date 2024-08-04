@@ -1,7 +1,29 @@
 Overview
 --------
 
-To get started, you can install the package and use it as follows:
+
+Start the Services
+==================
+
+To get started, run the following (for a full breakdown, see `/docker/README.rst`)
+
+.. code:: bash
+
+        cd docker
+        docker compose up --build
+
+
+FastAPI can be accessed at http://localhost:8000 (example below), and Streamlit at http://localhost:8501
+
+... code:: bash
+
+    curl -X 'GET' 'http://localhost:8000/' -H 'accept: application/json'
+    {"Hello":"World"}
+
+Developing
+==========
+
+To get started locally, you can install the package and use it as follows:
 
 .. code:: bash
 
