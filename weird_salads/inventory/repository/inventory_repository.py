@@ -2,12 +2,21 @@
 Building on a Repository Pattern
 """
 
-from typing import Any, Dict
+
+from typing import List
 
 from sqlalchemy.orm import joinedload
 
-from weird_salads.inventory.inventory_service.inventory import MenuItem, SimpleMenuItem
-from weird_salads.inventory.repository.models import MenuModel, RecipeIngredientModel
+from weird_salads.inventory.inventory_service.inventory import (
+    MenuItem,
+    SimpleMenuItem,
+    StockItem,
+)
+from weird_salads.inventory.repository.models import (
+    MenuModel,
+    RecipeIngredientModel,
+    StockModel,
+)
 
 __all__ = ["MenuRepository"]
 
@@ -42,7 +51,7 @@ class MenuRepository:
             .first()
         )
 
-    def get_tree(self, id: int) -> Dict[str, Any]:
+    def get_tree(self, id: int) -> MenuItem:
         # Fetch the tree data
         tree = self._get_tree(id)
 
@@ -74,7 +83,7 @@ class MenuRepository:
             )
 
             # Convert MenuItem to a dictionary and return it
-            return menu_item.dict()
+            return menu_item
 
     def list(self, limit=None):
         query = self.session.query(MenuModel)
@@ -86,3 +95,37 @@ class MenuRepository:
 
     def delete(self, id):
         pass
+
+    # - Stock-related
+    def _get_ingredient(self, id: int):
+        return (
+            self.session.query(StockModel)
+            .filter(StockModel.ingredient_id == int(id))
+            .all()
+        )  # noqa: E501
+
+    def get_ingredient(self, id: int) -> List[StockItem]:
+        ingredients = self._get_ingredient(id)
+        if ingredients is not None:
+            return [StockItem(**ingredient.dict()) for ingredient in ingredients]
+
+    def _get_stock(self, id: str):
+        return self.session.query(StockModel).filter(StockModel.id == id).first()
+
+    def get_stock(self, id_: str):
+        order = self._get(id)
+        if order is not None:
+            return StockItem(**order.dict())
+
+    def list_stock(self, limit=None):
+        query = self.session.query(StockModel)
+        records = query.all()
+        return [StockItem(**record.dict()) for record in records]
+        # return [Ingredient(**record.dict()) for record in records]
+        # should this return an IngredientItemsModel?
+
+    def add_stock(self, item):
+        print(item)
+        record = StockModel(**item)
+        self.session.add(record)
+        return StockItem(**record.dict(), order_=record)

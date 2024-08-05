@@ -3,6 +3,7 @@ from starlette import status
 
 from weird_salads.api.schemas import (
     CreateOrderSchema,
+    GetMenuItemAvailabilitySchema,
     GetMenuItemSchema,
     GetOrderSchema,
     GetOrdersSchema,
@@ -36,6 +37,24 @@ def get_order(item_id: int):
             inventory_service = MenuService(repo)
             order = inventory_service.get_item(item_id=item_id)
         return order
+    except MenuItemNotFoundError:
+        raise HTTPException(
+            status_code=404, detail=f"Menu Item with ID {item_id} not found"
+        )
+
+
+@app.get(
+    "/menu/{item_id}/availability",
+    response_model=GetMenuItemAvailabilitySchema,
+    tags=["Menu"],
+)
+def get_availability(item_id: int):
+    try:
+        with UnitOfWork() as unit_of_work:
+            repo = MenuRepository(unit_of_work.session)
+            inventory_service = MenuService(repo)
+            order = inventory_service.get_recipe_item_availability(item_id=item_id)
+        return order  # Ensure `order` is an instance of `GetRecipeItemSchema`
     except MenuItemNotFoundError:
         raise HTTPException(
             status_code=404, detail=f"Menu Item with ID {item_id} not found"

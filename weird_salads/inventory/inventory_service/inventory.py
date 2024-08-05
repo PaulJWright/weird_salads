@@ -2,7 +2,13 @@
 Classes
 """
 
-__all__ = ["SimpleMenuItem"]
+__all__ = [
+    "SimpleMenuItem",
+    "MenuItem",
+    "MenuItemIngredient",
+    "IngredientItem",
+    "StockItem",
+]
 
 
 # - MenuItem holds MenuItemIngredients
@@ -84,3 +90,40 @@ class IngredientItem:
             "description": self.description,
         }
         return result
+
+
+class StockItem:
+    def __init__(
+        self,
+        id,
+        ingredient_id,
+        unit,
+        quantity,
+        cost,
+        delivery_date,
+        created_on,
+        order_=None,
+    ):
+        self._order = order_
+        self._id = id
+        self.ingredient_id = ingredient_id
+        self.unit = unit
+        self.quantity = quantity
+        self.cost = cost
+        self.delivery_date = delivery_date
+        self.created_on = created_on
+
+    @property
+    def id(self):
+        return self._id or self._order.id
+
+    def dict(self):
+        return {
+            "id": self.id,
+            "ingredient_id": self.ingredient_id,
+            "unit": self.unit,
+            "quantity": self.quantity,
+            "cost": self.cost,
+            "delivery_date": self.delivery_date,
+            "created_on": self.created_on,
+        }

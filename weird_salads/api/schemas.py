@@ -67,7 +67,6 @@ class GetSimpleMenuSchema(BaseModel):
 # -------------------------
 
 
-# Schema for IngredientItem
 class IngredientItemSchema(BaseModel):
     name: str
     description: Optional[str] = None
@@ -103,6 +102,29 @@ class GetMenuItemSchema(GetSimpleMenuItemSchema):
     ingredients: List[
         MenuItemIngredientSchema
     ]  # Include ingredients with the menu item
+
+
+# Stock-related things
+# --------------------
+
+
+class MenuItemAvailabilitySchema(BaseModel):
+    ingredient: GetIngredientItemSchema
+    required_quantity: Annotated[float, Field(ge=0.0, strict=True)]
+    available_quantity: Annotated[float, Field(ge=0.0, strict=True)]
+    unit: UnitOfMeasure
+
+    class Config:
+        extra = "forbid"
+
+
+# Schema for menu item availability
+class GetMenuItemAvailabilitySchema(GetSimpleMenuItemSchema):
+    available_portions: int = 0
+    ingredient_availability: List[MenuItemAvailabilitySchema]
+
+    class Config:
+        extra = "forbid"
 
 
 # =================================
