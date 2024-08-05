@@ -18,10 +18,11 @@ COPY ../database/ /app/database
 # https://setuptools-scm.readthedocs.io/en/latest/usage/
 # https://stackoverflow.com/questions/77572077/using-setuptools-scm-pretend-version-for-package-version-inside-docker-with-git
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_MY_PACKAGE=0.0
-RUN pip install --root-user-action=ignore --no-cache-dir .
+RUN pip install --root-user-action=ignore .
 
-ARG LOCATION_ID
+ARG SEED_LOCATION_ID
+ARG SEED_QUANTITY
 # Command to run FastAPI using Uvicorn
 # CMD ["uvicorn", "weird_salads.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
-CMD ["sh", "-c", "alembic upgrade head && python weird_salads/utils/database/seed_db.py --location_id ${LOCATION_ID} --base_path data/ && uvicorn weird_salads.api.app:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "alembic upgrade head && python weird_salads/utils/database/seed_db.py --location_id ${SEED_LOCATION_ID} --quantity ${SEED_QUANTITY} --base_path data/ && uvicorn weird_salads.api.app:app --host 0.0.0.0 --port 8000"]
 # CMD ["sleep", "365d"]

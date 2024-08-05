@@ -9,7 +9,8 @@ services:
       - ../data/:/app/data/ # Mount the data
     environment:
       - DATABASE_URL=sqlite:///data/orders.db
-      - LOCATION_ID=1 # put as an environment variable
+      - SEED_LOCATION_ID=1 # location id for DB seeding
+      - SEED_QUANTITY=7.4 # quantity of ingredients for DB seeding
 
   streamlit:
     build:

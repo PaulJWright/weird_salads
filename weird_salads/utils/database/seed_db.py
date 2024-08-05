@@ -211,7 +211,7 @@ def main(location_id: int, quantity: int, base_path: Path) -> None:
                 )
 
                 logger.info(
-                    f"Seeding completed successfully for location {location_id}."
+                    f"Seeding completed successfully for location {location_id} and quantity {quantity}."  # noqa: E501
                 )
             else:
                 logger.info("Database already contains data. Skipping seeding.")
@@ -229,7 +229,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--quantity",
-        type=int,
+        type=float,
         default=0,
         help="The quantity of data to seed (in respective units).",
     )
