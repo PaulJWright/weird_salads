@@ -1,0 +1,30 @@
+modifier_id,name,option,price
+1,Add ingredient,Taleggio Cheese,3.73
+1,Add ingredient,Turmeric,1.66
+1,Add ingredient,Vegetable Oil,1.93
+1,Add ingredient,Cornichons,2.27
+1,Add ingredient,Tea Oil,2.56
+1,Add ingredient,French Eschallots,4.02
+1,Add ingredient,Tempeh,2.59
+1,Add ingredient,Dill,2.42
+1,Add ingredient,Fresh Chillies,2.77
+1,Add ingredient,Pepitas,2.93
+1,Add ingredient,Watermelon,1.84
+1,Add ingredient,Sea Salt,3.45
+2,Allergens,Crustaceans,0
+2,Allergens,None,0
+2,Allergens,Sesame,0
+2,Allergens,Peanut,0
+2,Allergens,Halal,0
+2,Allergens,Fish,0
+2,Allergens,Vegan,0
+2,Allergens,Celery,0
+2,Allergens,Mollusc,0
+2,Allergens,Sulphites,0
+2,Allergens,Gluten,0
+2,Allergens,Lupin,0
+2,Allergens,Nut,0
+2,Allergens,Mustard,0
+2,Allergens,Dairy,0
+2,Allergens,Soy,0
+2,Allergens,Egg,0

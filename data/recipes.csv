@@ -1,0 +1,1205 @@
+recipe_id,name,quantity,ingredient_id
+1,The Kinks,5.2,403
+1,The Kinks,4.1,409
+1,The Kinks,2.6,92
+1,The Kinks,1.4,440
+1,The Kinks,5.9,19
+1,The Kinks,3.7,205
+2,Blondie,3.5,187
+2,Blondie,8.1,5
+2,Blondie,4.7,294
+2,Blondie,6.2,385
+2,Blondie,4.1,409
+2,Blondie,2.7,63
+2,Blondie,4.2,107
+2,Blondie,5.1,419
+2,Blondie,3.9,135
+3,Thornley,7.4,114
+3,Thornley,4.3,166
+3,Thornley,4.5,87
+3,Thornley,8.1,434
+3,Thornley,0,335
+4,Iggy Pop,7.5,244
+4,Iggy Pop,3.6,269
+4,Iggy Pop,5.3,439
+4,Iggy Pop,8.9,380
+4,Iggy Pop,7.5,85
+4,Iggy Pop,5.4,21
+4,Iggy Pop,6.9,149
+5,Pat Metheny,7.4,64
+5,Pat Metheny,8.3,431
+5,Pat Metheny,4.2,8
+5,Pat Metheny,5.1,466
+5,Pat Metheny,8.1,434
+5,Pat Metheny,7.9,112
+5,Pat Metheny,0.4,4
+5,Pat Metheny,1.5,317
+5,Pat Metheny,2.3,442
+5,Pat Metheny,1.4,395
+5,Pat Metheny,5.1,270
+6,Prince,1.5,317
+6,Prince,6.6,414
+6,Prince,3.7,300
+6,Prince,0.1,478
+6,Prince,0.7,128
+6,Prince,4.2,8
+7,Arctic Monkeys,1.5,461
+7,Arctic Monkeys,5.5,33
+7,Arctic Monkeys,0.3,415
+7,Arctic Monkeys,8.8,443
+7,Arctic Monkeys,8.4,452
+7,Arctic Monkeys,0.2,71
+7,Arctic Monkeys,4.4,23
+7,Arctic Monkeys,7.1,263
+8,Captain Beefheart,7.2,17
+8,Captain Beefheart,1.1,223
+8,Captain Beefheart,3.7,205
+8,Captain Beefheart,5.5,280
+8,Captain Beefheart,4.2,369
+8,Captain Beefheart,2.5,35
+8,Captain Beefheart,0,373
+8,Captain Beefheart,8.8,167
+8,Captain Beefheart,7.8,315
+8,Captain Beefheart,4.1,274
+8,Captain Beefheart,1.7,379
+9,Elvis Presley,8.1,434
+9,Elvis Presley,6.4,108
+9,Elvis Presley,4.5,129
+9,Elvis Presley,5.1,466
+9,Elvis Presley,2.8,202
+9,Elvis Presley,8.3,431
+9,Elvis Presley,6.3,86
+10,Brian Wilson,2.4,444
+10,Brian Wilson,4.1,274
+11,Jeff Beck,3.4,303
+11,Jeff Beck,8.1,109
+11,Jeff Beck,6.6,257
+11,Jeff Beck,4.6,256
+11,Jeff Beck,6.6,123
+11,Jeff Beck,9,75
+11,Jeff Beck,3.7,300
+11,Jeff Beck,6.1,420
+12,AC/DC,1.3,180
+12,AC/DC,7.4,429
+12,AC/DC,3.6,411
+12,AC/DC,2,179
+12,AC/DC,8.2,422
+12,AC/DC,8.1,311
+12,AC/DC,0.3,324
+12,AC/DC,5.4,176
+12,AC/DC,0.5,320
+12,AC/DC,4.1,136
+12,AC/DC,1.7,43
+13,Grace Jones,5.8,73
+13,Grace Jones,2.5,397
+13,Grace Jones,0.2,71
+13,Grace Jones,1.3,388
+13,Grace Jones,0.1,478
+13,Grace Jones,4.6,160
+13,Grace Jones,6.9,477
+14,Chrissie Hynde,5.1,419
+14,Chrissie Hynde,2.2,217
+14,Chrissie Hynde,7.9,364
+15,Johnny Marr,0.4,80
+15,Johnny Marr,7.5,85
+15,Johnny Marr,4,196
+15,Johnny Marr,5,436
+15,Johnny Marr,2.1,12
+15,Johnny Marr,7.4,114
+15,Johnny Marr,2,65
+15,Johnny Marr,0.7,128
+15,Johnny Marr,5.4,158
+16,Red Hot Chili Peppers,3.9,11
+16,Red Hot Chili Peppers,3.9,135
+16,Red Hot Chili Peppers,2.1,12
+16,Red Hot Chili Peppers,1.3,476
+16,Red Hot Chili Peppers,7.8,171
+16,Red Hot Chili Peppers,3.7,205
+16,Red Hot Chili Peppers,1.3,479
+16,Red Hot Chili Peppers,4.8,150
+16,Red Hot Chili Peppers,0.2,382
+16,Red Hot Chili Peppers,2.5,397
+16,Red Hot Chili Peppers,7.1,263
+17,Radiohead,2.7,15
+17,Radiohead,4.4,393
+17,Radiohead,7.4,251
+17,Radiohead,0.6,126
+17,Radiohead,0,119
+17,Radiohead,0,335
+17,Radiohead,5.4,355
+17,Radiohead,5.2,208
+18,Phish,8.1,434
+18,Phish,0.4,6
+18,Phish,3.9,11
+18,Phish,6.4,108
+19,Duke Ellington,6.6,123
+19,Duke Ellington,6.3,86
+19,Duke Ellington,1.3,180
+19,Duke Ellington,3.4,168
+19,Duke Ellington,4,413
+19,Duke Ellington,3.2,337
+19,Duke Ellington,4.3,191
+19,Duke Ellington,3.9,312
+19,Duke Ellington,6.2,138
+20,Siouxsie and The Banshees,1.9,211
+20,Siouxsie and The Banshees,4.8,459
+20,Siouxsie and The Banshees,8.2,327
+20,Siouxsie and The Banshees,6.9,37
+20,Siouxsie and The Banshees,7.2,446
+20,Siouxsie and The Banshees,7.6,125
+21,Muse,8.3,394
+21,Muse,2.8,310
+21,Muse,8.8,238
+21,Muse,4.2,29
+21,Muse,6.4,53
+21,Muse,2.8,326
+21,Muse,1.2,146
+22,Chuck Berry,3.9,312
+22,Chuck Berry,2.6,329
+22,Chuck Berry,8.7,321
+22,Chuck Berry,4.9,293
+22,Chuck Berry,2.3,88
+22,Chuck Berry,1,143
+23,Offspring,5.2,208
+23,Offspring,5.5,231
+23,Offspring,2,172
+23,Offspring,1.3,200
+23,Offspring,5.9,386
+24,Ozzy Osbourne,5,398
+24,Ozzy Osbourne,6.7,361
+24,Ozzy Osbourne,8.4,416
+24,Ozzy Osbourne,5.5,280
+24,Ozzy Osbourne,0,119
+24,Ozzy Osbourne,0.6,331
+24,Ozzy Osbourne,1.4,285
+24,Ozzy Osbourne,8.7,321
+24,Ozzy Osbourne,2.8,326
+24,Ozzy Osbourne,6.3,86
+24,Ozzy Osbourne,6.1,451
+25,The Jam,5.8,122
+25,The Jam,1.2,351
+25,The Jam,2.6,92
+25,The Jam,2.8,310
+26,Ryan Adams,2.3,41
+26,Ryan Adams,2.4,444
+26,Ryan Adams,7.6,242
+26,Ryan Adams,2.5,359
+26,Ryan Adams,2.4,325
+26,Ryan Adams,8.4,452
+26,Ryan Adams,4.2,107
+26,Ryan Adams,3.8,22
+26,Ryan Adams,5.5,99
+27,Max Roach,2.8,432
+27,Max Roach,0.4,253
+27,Max Roach,7.9,24
+27,Max Roach,5.9,183
+27,Max Roach,4.2,107
+27,Max Roach,2.3,88
+27,Max Roach,7.4,429
+28,Sex Pistols,4.2,29
+28,Sex Pistols,1.9,211
+28,Sex Pistols,6.7,91
+28,Sex Pistols,1.3,180
+28,Sex Pistols,7.1,117
+29,The Who,6.6,257
+29,The Who,1.8,230
+29,The Who,6.9,239
+29,The Who,8.7,321
+29,The Who,7.8,374
+29,The Who,4,36
+29,The Who,2.4,325
+29,The Who,0.9,371
+29,The Who,6.7,463
+29,The Who,6.8,228
+30,The Ramones,4.3,212
+30,The Ramones,2.7,405
+30,The Ramones,5.3,437
+30,The Ramones,5.9,19
+30,The Ramones,1.9,248
+30,The Ramones,7.1,263
+30,The Ramones,1,278
+30,The Ramones,0.7,157
+30,The Ramones,4.2,8
+31,David Bowie,3.5,154
+31,David Bowie,2.4,299
+31,David Bowie,4.5,93
+31,David Bowie,4.6,160
+31,David Bowie,7.5,244
+32,Cliff Richard (and the Shadows),6,268
+32,Cliff Richard (and the Shadows),7.4,210
+32,Cliff Richard (and the Shadows),7.4,338
+32,Cliff Richard (and the Shadows),4.9,384
+32,Cliff Richard (and the Shadows),2.5,232
+32,Cliff Richard (and the Shadows),5.4,355
+32,Cliff Richard (and the Shadows),7.7,455
+32,Cliff Richard (and the Shadows),1.7,356
+32,Cliff Richard (and the Shadows),4,16
+33,Ella Fitzgerald,8.5,42
+33,Ella Fitzgerald,0.5,141
+33,Ella Fitzgerald,4.2,29
+34,Jeff Buckley,2.9,178
+34,Jeff Buckley,1,49
+35,White Stripes,6.3,86
+35,White Stripes,0.2,71
+35,White Stripes,8,319
+35,White Stripes,1.7,379
+35,White Stripes,0,119
+35,White Stripes,6.4,53
+35,White Stripes,5.8,81
+35,White Stripes,5.9,470
+35,White Stripes,8,213
+35,White Stripes,2,134
+35,White Stripes,7.5,244
+36,Frightened Rabbit,4.9,145
+36,Frightened Rabbit,8.2,422
+36,Frightened Rabbit,2.7,390
+36,Frightened Rabbit,0.5,141
+36,Frightened Rabbit,7.1,348
+36,Frightened Rabbit,0.6,396
+36,Frightened Rabbit,4.5,341
+36,Frightened Rabbit,8.2,220
+36,Frightened Rabbit,7,214
+37,Carlos Santana,0.1,144
+37,Carlos Santana,2.3,442
+37,Carlos Santana,8.7,186
+37,Carlos Santana,5.8,2
+37,Carlos Santana,5.4,176
+37,Carlos Santana,8.7,153
+37,Carlos Santana,0.1,83
+37,Carlos Santana,3.9,135
+37,Carlos Santana,3.9,165
+37,Carlos Santana,4.8,215
+38,Sinead O'connor,5.8,73
+38,Sinead O'connor,4.1,274
+39,Billy Idol,2.5,232
+39,Billy Idol,4.9,105
+39,Billy Idol,4.9,293
+39,Billy Idol,7,357
+39,Billy Idol,7.4,387
+39,Billy Idol,8.4,452
+39,Billy Idol,7.8,315
+39,Billy Idol,4.1,409
+39,Billy Idol,1,399
+40,Led Zeppelin,8.1,345
+40,Led Zeppelin,3.8,22
+40,Led Zeppelin,8,319
+40,Led Zeppelin,2.4,20
+40,Led Zeppelin,8.9,380
+40,Led Zeppelin,0.4,4
+40,Led Zeppelin,4.3,254
+40,Led Zeppelin,3.6,400
+40,Led Zeppelin,4.5,129
+40,Led Zeppelin,8.8,443
+41,Marilyn Manson,3.6,323
+41,Marilyn Manson,8.3,174
+41,Marilyn Manson,3.6,366
+41,Marilyn Manson,7.8,464
+41,Marilyn Manson,7.9,112
+41,Marilyn Manson,2.7,161
+41,Marilyn Manson,5.3,188
+41,Marilyn Manson,3.9,467
+41,Marilyn Manson,7.9,137
+42,Dizzy Gillespie,1.4,285
+42,Dizzy Gillespie,0.2,381
+43,Thelonius Monk,7.2,360
+43,Thelonius Monk,7.8,407
+43,Thelonius Monk,5.8,2
+43,Thelonius Monk,6.9,477
+44,Guns N' Roses,1.1,223
+44,Guns N' Roses,7.4,113
+44,Guns N' Roses,3.4,175
+45,Chris Isaak,2.2,332
+45,Chris Isaak,1.9,198
+45,Chris Isaak,2.3,203
+45,Chris Isaak,1.3,180
+46,Tom Waits,4.4,222
+46,Tom Waits,6.6,123
+46,Tom Waits,0.2,68
+46,Tom Waits,4.4,352
+46,Tom Waits,1.3,180
+46,Tom Waits,5.2,184
+46,Tom Waits,0.1,144
+46,Tom Waits,6,39
+46,Tom Waits,0.2,382
+46,Tom Waits,2.2,28
+47,Patti Smith,7.1,263
+47,Patti Smith,4.4,352
+47,Patti Smith,0.8,438
+47,Patti Smith,4.8,459
+47,Patti Smith,0.4,4
+47,Patti Smith,2.3,203
+47,Patti Smith,7.5,244
+47,Patti Smith,6.2,385
+48,Nick Cave,2.4,322
+48,Nick Cave,3.5,301
+48,Nick Cave,4.8,150
+48,Nick Cave,6.4,108
+48,Nick Cave,2,219
+48,Nick Cave,3.4,175
+48,Nick Cave,1.3,476
+48,Nick Cave,8.3,394
+48,Nick Cave,1.8,230
+49,Alex Chilton,3.5,18
+49,Alex Chilton,2,115
+49,Alex Chilton,3.9,11
+49,Alex Chilton,3.7,170
+50,Eric Clapton,3.8,90
+50,Eric Clapton,1.6,328
+50,Eric Clapton,2.8,282
+50,Eric Clapton,0.4,4
+50,Eric Clapton,6.4,53
+50,Eric Clapton,1.4,78
+50,Eric Clapton,0.1,83
+50,Eric Clapton,4.8,430
+50,Eric Clapton,2.6,92
+50,Eric Clapton,6.8,228
+50,Eric Clapton,8.3,431
+51,George Michael,2.5,232
+51,George Michael,1.5,461
+51,George Michael,6.4,108
+51,George Michael,4.7,94
+51,George Michael,2.2,332
+51,George Michael,3,334
+51,George Michael,3.9,467
+51,George Michael,8.5,333
+51,George Michael,3.7,247
+51,George Michael,7.4,429
+52,Primal Scream,6.4,383
+52,Primal Scream,6.7,463
+52,Primal Scream,1.9,198
+52,Primal Scream,8,319
+53,Bruce Springsteen,2.9,178
+53,Bruce Springsteen,1.1,223
+53,Bruce Springsteen,8.2,423
+53,Bruce Springsteen,5.4,82
+53,Bruce Springsteen,4.1,409
+53,Bruce Springsteen,7.9,24
+53,Bruce Springsteen,6.7,139
+53,Bruce Springsteen,3.6,59
+53,Bruce Springsteen,0.2,265
+53,Bruce Springsteen,2,115
+54,Pete Townshend,5.6,131
+54,Pete Townshend,0.2,71
+54,Pete Townshend,4.4,460
+54,Pete Townshend,5.9,470
+54,Pete Townshend,3.5,18
+54,Pete Townshend,4.2,369
+55,Status Quo,4.8,389
+55,Status Quo,7.5,244
+55,Status Quo,0.6,396
+55,Status Quo,6.8,98
+55,Status Quo,5.3,283
+55,Status Quo,4.5,341
+55,Status Quo,2.8,133
+55,Status Quo,7.1,117
+55,Status Quo,4.9,297
+56,Roy Hargrove,6.3,95
+56,Roy Hargrove,5,60
+56,Roy Hargrove,1.5,461
+57,Tom Robinson,6.7,463
+57,Tom Robinson,2.3,41
+57,Tom Robinson,6.3,140
+57,Tom Robinson,6.3,218
+57,Tom Robinson,7.2,192
+57,Tom Robinson,0.1,195
+57,Tom Robinson,3.9,101
+57,Tom Robinson,7.2,446
+57,Tom Robinson,2,179
+58,Pearl Jam,1.7,43
+58,Pearl Jam,5.4,110
+58,Pearl Jam,8.7,321
+58,Pearl Jam,0.3,56
+58,Pearl Jam,1,399
+58,Pearl Jam,5.2,208
+59,Blinker The Star,6.7,361
+59,Blinker The Star,5.2,346
+60,Program The Dead,6.9,149
+60,Program The Dead,8.2,370
+60,Program The Dead,7.2,446
+60,Program The Dead,5.9,470
+60,Program The Dead,7,214
+60,Program The Dead,0.4,233
+60,Program The Dead,1.5,461
+60,Program The Dead,8,319
+60,Program The Dead,5,255
+61,Chic,5.5,280
+61,Chic,3.7,247
+62,Beck,2.4,20
+62,Beck,3.8,468
+63,Rod Stewart,8.8,238
+63,Rod Stewart,2.4,444
+63,Rod Stewart,8.3,474
+64,Cortinas,2,221
+64,Cortinas,6.5,77
+64,Cortinas,5,436
+64,Cortinas,7.9,120
+64,Cortinas,2,172
+64,Cortinas,5.3,437
+64,Cortinas,7.7,455
+65,Leonard Cohen,5,60
+65,Leonard Cohen,2.6,48
+65,Leonard Cohen,2.9,206
+65,Leonard Cohen,6.9,239
+66,Adam and the Ants,4.4,222
+66,Adam and the Ants,2.7,472
+66,Adam and the Ants,6.6,414
+66,Adam and the Ants,0.4,6
+66,Adam and the Ants,4.2,369
+66,Adam and the Ants,8.8,167
+66,Adam and the Ants,0.6,331
+66,Adam and the Ants,0.1,83
+66,Adam and the Ants,7.4,429
+67,Buzzcocks,3.6,59
+67,Buzzcocks,1.4,440
+67,Buzzcocks,5.6,426
+67,Buzzcocks,4.3,166
+67,Buzzcocks,6.3,95
+67,Buzzcocks,1.6,116
+67,Buzzcocks,4.6,256
+68,Lenny Kravitz,5.4,158
+68,Lenny Kravitz,6.8,228
+69,The La's,0.5,141
+69,The La's,4,413
+69,The La's,4.9,384
+69,The La's,3.6,59
+69,The La's,4.3,212
+69,The La's,6.7,277
+70,Nirvana,1.9,147
+70,Nirvana,6.9,471
+70,Nirvana,6.9,37
+71,The Smiths,5.2,342
+71,The Smiths,7.6,125
+71,The Smiths,3.4,303
+71,The Smiths,4.5,240
+71,The Smiths,4.1,55
+71,The Smiths,6.8,347
+71,The Smiths,0,335
+71,The Smiths,3.5,18
+71,The Smiths,7.4,114
+72,Jimi Hendrix,6.8,347
+72,Jimi Hendrix,2,115
+72,Jimi Hendrix,8.2,449
+72,Jimi Hendrix,5.8,81
+72,Jimi Hendrix,2.4,322
+72,Jimi Hendrix,4.3,391
+72,Jimi Hendrix,6.7,139
+72,Jimi Hendrix,4.2,50
+72,Jimi Hendrix,2.3,442
+72,Jimi Hendrix,5.9,245
+73,Manic Street Preachers,4.5,129
+73,Manic Street Preachers,5.3,437
+73,Manic Street Preachers,6.1,318
+73,Manic Street Preachers,6.9,367
+73,Manic Street Preachers,0.6,396
+74,Muddy Waters,0.5,320
+74,Muddy Waters,6.3,95
+74,Muddy Waters,1.2,146
+74,Muddy Waters,3.5,72
+74,Muddy Waters,0.9,96
+74,Muddy Waters,8.4,452
+75,U2,0.4,4
+75,U2,2.8,310
+75,U2,1.3,476
+75,U2,4.2,369
+75,U2,4.5,87
+75,U2,4.9,100
+75,U2,3.2,465
+75,U2,1.9,198
+76,Phil Collins,6.7,361
+76,Phil Collins,3.6,182
+76,Phil Collins,1.9,211
+76,Phil Collins,7.4,338
+76,Phil Collins,8.1,109
+76,Phil Collins,7.3,31
+76,Phil Collins,1.3,476
+76,Phil Collins,0,47
+76,Phil Collins,5.8,122
+77,Johnny Borrell,5.5,33
+77,Johnny Borrell,7.4,64
+77,Johnny Borrell,1.7,435
+77,Johnny Borrell,3.9,11
+77,Johnny Borrell,6.9,372
+77,Johnny Borrell,6.8,98
+78,Keith Richards,8.8,443
+78,Keith Richards,1.2,350
+78,Keith Richards,1.4,453
+78,Keith Richards,4,292
+78,Keith Richards,8.1,311
+78,Keith Richards,0.2,377
+78,Keith Richards,3,334
+78,Keith Richards,2.8,133
+78,Keith Richards,8.2,370
+79,John Coltrane,6.1,286
+79,John Coltrane,8.5,349
+79,John Coltrane,0.1,144
+79,John Coltrane,0.1,298
+79,John Coltrane,5.8,9
+80,The Libertines,8.1,434
+80,The Libertines,5.7,261
+80,The Libertines,3,334
+80,The Libertines,6.7,277
+80,The Libertines,0,335
+81,Nigel Kennedy,5.3,276
+81,Nigel Kennedy,2.6,61
+81,Nigel Kennedy,5.1,121
+81,Nigel Kennedy,4,413
+81,Nigel Kennedy,4.8,389
+81,Nigel Kennedy,4,38
+81,Nigel Kennedy,6.7,62
+81,Nigel Kennedy,8.8,209
+81,Nigel Kennedy,7.3,31
+82,Afrika Bambaataa,4.4,393
+82,Afrika Bambaataa,8.8,273
+82,Afrika Bambaataa,4.4,460
+82,Afrika Bambaataa,5,60
+82,Afrika Bambaataa,4.3,166
+82,Afrika Bambaataa,5.1,121
+82,Afrika Bambaataa,5,204
+82,Afrika Bambaataa,0.1,298
+82,Afrika Bambaataa,1,278
+82,Afrika Bambaataa,5.6,131
+82,Afrika Bambaataa,4.1,409
+83,Sonic Youth,5.9,169
+83,Sonic Youth,3,264
+83,Sonic Youth,0.5,259
+83,Sonic Youth,7.1,117
+83,Sonic Youth,7,357
+83,Sonic Youth,5.2,342
+83,Sonic Youth,5.3,437
+83,Sonic Youth,0.3,378
+83,Sonic Youth,5.6,131
+84,Pulp,8.8,185
+84,Pulp,0.4,253
+84,Pulp,3.8,289
+85,Queen,3.2,337
+85,Queen,1.8,51
+85,Queen,6.9,372
+85,Queen,1.7,43
+85,Queen,5.8,9
+85,Queen,4.8,368
+85,Queen,6.1,404
+85,Queen,2.9,178
+85,Queen,0.2,68
+85,Queen,2.1,12
+86,The Undertones,5,436
+86,The Undertones,7.2,192
+86,The Undertones,0.8,159
+86,The Undertones,0.4,233
+86,The Undertones,0.4,336
+86,The Undertones,6.8,228
+86,The Undertones,2.8,432
+86,The Undertones,6.7,463
+86,The Undertones,6.1,318
+87,Miles Davis,8.8,209
+87,Miles Davis,2.8,202
+88,Joy Division,1.3,339
+88,Joy Division,6.4,383
+88,Joy Division,4.1,55
+88,Joy Division,5.3,428
+89,Al Foster,0.7,127
+89,Al Foster,3.4,303
+89,Al Foster,4.5,156
+89,Al Foster,0.4,4
+89,Al Foster,3.1,13
+89,Al Foster,6.7,277
+89,Al Foster,4,306
+89,Al Foster,2.7,32
+89,Al Foster,2,179
+90,Coldplay,5.6,426
+90,Coldplay,5.7,261
+90,Coldplay,1,49
+90,Coldplay,4.8,459
+90,Coldplay,8,319
+90,Coldplay,4.3,212
+90,Coldplay,7,118
+91,The Birthday Party,5.3,30
+91,The Birthday Party,7.2,252
+91,The Birthday Party,4.4,460
+91,The Birthday Party,3.3,40
+92,Paramore,2.7,472
+92,Paramore,4.5,156
+92,Paramore,6.3,140
+92,Paramore,1.2,351
+92,Paramore,2.6,48
+93,Deepest Blue,4.4,460
+93,Deepest Blue,6,462
+93,Deepest Blue,4.9,260
+93,Deepest Blue,4.1,290
+93,Deepest Blue,7.9,24
+93,Deepest Blue,7,118
+93,Deepest Blue,8.2,370
+93,Deepest Blue,5.9,89
+93,Deepest Blue,6.6,123
+94,Foo Fighters,6.5,77
+94,Foo Fighters,0.5,320
+94,Foo Fighters,5.8,73
+94,Foo Fighters,4.3,391
+94,Foo Fighters,2.7,267
+94,Foo Fighters,8.1,345
+94,Foo Fighters,8.3,431
+94,Foo Fighters,7,357
+94,Foo Fighters,5.2,194
+94,Foo Fighters,2.2,332
+94,Foo Fighters,0.1,427
+95,Fats Domino,4.3,191
+95,Fats Domino,5.8,421
+95,Fats Domino,4.5,229
+95,Fats Domino,3.2,458
+95,Fats Domino,0.1,344
+96,K.D Lang,4.2,457
+96,K.D Lang,2.2,332
+96,K.D Lang,6.8,272
+96,K.D Lang,2.5,232
+96,K.D Lang,4.5,129
+96,K.D Lang,5.7,418
+96,K.D Lang,3,130
+97,New Order,8,319
+97,New Order,5.5,33
+97,New Order,0.4,80
+98,Rory Gallagher,5.2,403
+98,Rory Gallagher,4,38
+98,Rory Gallagher,2.3,442
+98,Rory Gallagher,1.3,425
+98,Rory Gallagher,0.5,412
+98,Rory Gallagher,0.3,324
+98,Rory Gallagher,1.9,450
+99,Annie Lennox,7.5,181
+99,Annie Lennox,7.4,114
+99,Annie Lennox,3.9,312
+99,Annie Lennox,6.2,197
+99,Annie Lennox,2.3,308
+99,Annie Lennox,2.9,178
+99,Annie Lennox,6.4,246
+99,Annie Lennox,5.5,447
+100,Blur,1.5,281
+100,Blur,8.9,380
+100,Blur,3.2,465
+100,Blur,6.9,471
+100,Blur,0.4,66
+100,Blur,1.4,395
+100,Blur,5.4,82
+100,Blur,8,266
+100,Blur,4.9,234
+100,Blur,8.1,311
+100,Blur,3.9,11
+101,The Rolling Stones,2.5,359
+101,The Rolling Stones,4.9,384
+101,The Rolling Stones,5.9,183
+101,The Rolling Stones,7.9,137
+102,Green Day,7.8,464
+102,Green Day,8.7,186
+102,Green Day,2.9,178
+102,Green Day,5.3,437
+102,Green Day,0.4,233
+102,Green Day,6,102
+102,Green Day,6.3,86
+102,Green Day,7.5,85
+102,Green Day,1.5,317
+102,Green Day,5.9,169
+102,Green Day,4.8,430
+103,The Yardbirds,2.8,326
+103,The Yardbirds,3.5,72
+103,The Yardbirds,0.5,412
+103,The Yardbirds,1.1,54
+103,The Yardbirds,0.4,80
+103,The Yardbirds,3.2,337
+104,O.A.R.,1.3,200
+104,O.A.R.,5,226
+105,Elton John,1.7,379
+105,Elton John,2.4,227
+105,Elton John,2.8,282
+105,Elton John,5.2,208
+105,Elton John,3.7,199
+105,Elton John,1.9,450
+105,Elton John,6.8,228
+106,Frank Sinatra,2.6,329
+106,Frank Sinatra,8.8,354
+106,Frank Sinatra,2.9,178
+106,Frank Sinatra,6.7,189
+106,Frank Sinatra,0.1,344
+106,Frank Sinatra,1.3,200
+107,Bob Marley (and the Wailers),5.1,121
+107,Bob Marley (and the Wailers),2.7,405
+107,Bob Marley (and the Wailers),4.9,234
+107,Bob Marley (and the Wailers),6.2,138
+107,Bob Marley (and the Wailers),0.4,6
+107,Bob Marley (and the Wailers),2.3,362
+107,Bob Marley (and the Wailers),6.4,246
+108,Maroon 5,4,413
+108,Maroon 5,6.3,25
+108,Maroon 5,6.4,53
+108,Maroon 5,7.4,338
+108,Maroon 5,7.8,464
+108,Maroon 5,4.8,459
+108,Maroon 5,8.8,167
+108,Maroon 5,6.4,108
+109,Herbie Hancock,2.4,325
+109,Herbie Hancock,6.9,291
+109,Herbie Hancock,5.9,183
+109,Herbie Hancock,7.3,31
+109,Herbie Hancock,8,319
+109,Herbie Hancock,3.6,402
+109,Herbie Hancock,0.3,324
+109,Herbie Hancock,0.9,96
+109,Herbie Hancock,1.5,461
+109,Herbie Hancock,0.2,265
+110,Paul Weller,1.7,309
+110,Paul Weller,0.4,6
+110,Paul Weller,8,266
+110,Paul Weller,0.7,128
+110,Paul Weller,2.5,35
+110,Paul Weller,4,413
+110,Paul Weller,6.5,77
+110,Paul Weller,6.9,471
+110,Paul Weller,2.8,133
+110,Paul Weller,6.2,385
+110,Paul Weller,7.5,181
+111,Rick Wright,4.8,389
+111,Rick Wright,8.9,380
+111,Rick Wright,8.2,271
+111,Rick Wright,4.2,457
+111,Rick Wright,6.1,451
+111,Rick Wright,6.3,95
+111,Rick Wright,1.7,379
+111,Rick Wright,0.3,415
+111,Rick Wright,4.6,256
+111,Rick Wright,8.3,474
+111,Rick Wright,2.8,310
+112,Ian Dury,1.6,302
+112,Ian Dury,0.4,142
+112,Ian Dury,6,102
+112,Ian Dury,4.9,293
+112,Ian Dury,6.3,10
+112,Ian Dury,6.1,177
+112,Ian Dury,8.2,271
+112,Ian Dury,4.4,358
+112,Ian Dury,2.8,326
+112,Ian Dury,6.1,76
+113,Pink Floyd,0,201
+113,Pink Floyd,2.7,472
+113,Pink Floyd,1.1,54
+113,Pink Floyd,6.9,149
+113,Pink Floyd,4.8,104
+113,Pink Floyd,1.7,309
+113,Pink Floyd,3.6,402
+113,Pink Floyd,2,221
+113,Pink Floyd,5.4,355
+113,Pink Floyd,5.9,19
+114,Liam Gallagher,5.3,276
+114,Liam Gallagher,4,36
+115,The Specials,4.7,225
+115,The Specials,0.2,382
+115,The Specials,2.2,217
+115,The Specials,8.1,193
+115,The Specials,4.1,136
+115,The Specials,2.5,397
+115,The Specials,5,398
+115,The Specials,4.9,100
+115,The Specials,7.2,314
+115,The Specials,7.8,374
+115,The Specials,8,213
+116,Madness,5.5,27
+116,Madness,7.6,242
+117,Syd Barrett,7.2,360
+117,Syd Barrett,1.9,211
+117,Syd Barrett,6,102
+117,Syd Barrett,7.3,353
+117,Syd Barrett,8,469
+117,Syd Barrett,1.7,356
+117,Syd Barrett,5.8,81
+117,Syd Barrett,1.6,116
+117,Syd Barrett,0.1,195
+117,Syd Barrett,2,172
+117,Syd Barrett,0.2,69
+118,Simply Red,6.5,250
+118,Simply Red,8.4,452
+119,Björk,3.3,40
+119,Björk,7.9,445
+119,Björk,8,469
+120,The Clash,2.8,133
+120,The Clash,5.3,439
+120,The Clash,0,335
+120,The Clash,0.2,71
+120,The Clash,2.7,161
+120,The Clash,3.6,402
+120,The Clash,3.5,301
+120,The Clash,5.4,355
+120,The Clash,0.1,298
+120,The Clash,0.2,265
+120,The Clash,6.7,361
+121,The Slits,8.6,236
+121,The Slits,1.8,51
+121,The Slits,8.8,185
+121,The Slits,7.4,64
+121,The Slits,0.3,190
+121,The Slits,4.3,166
+121,The Slits,6.4,246
+122,The Beatles,4,38
+122,The Beatles,0.4,456
+122,The Beatles,9,284
+122,The Beatles,4.9,145
+122,The Beatles,2.6,61
+122,The Beatles,2.3,203
+122,The Beatles,2,172
+123,The,2.4,299
+123,The,6.1,420
+123,The,3.4,46
+124,Roxy Music,2.3,203
+124,Roxy Music,1.3,476
+124,Roxy Music,5.9,470
+124,Roxy Music,1.6,57
+124,Roxy Music,3.9,135
+124,Roxy Music,8.7,186
+124,Roxy Music,6.5,26
+124,Roxy Music,3,262
+124,Roxy Music,4.8,430
+125,Hugh Masekela,0.6,396
+125,Hugh Masekela,2.4,322
+125,Hugh Masekela,0.7,375
+126,Keith Moon,8.5,333
+126,Keith Moon,8.8,185
+126,Keith Moon,7.7,455
+126,Keith Moon,4.8,215
+126,Keith Moon,8.3,406
+126,Keith Moon,0.4,253
+126,Keith Moon,2.4,444
+126,Keith Moon,7.2,192
+126,Keith Moon,6,173
+126,Keith Moon,4.9,297
+127,Kate Bush,5.6,249
+127,Kate Bush,3.5,52
+127,Kate Bush,8.1,279
+128,The Cranberries,4.8,430
+128,The Cranberries,3.8,468
+128,The Cranberries,3.6,402
+128,The Cranberries,3.9,101
+128,The Cranberries,8.8,354
+128,The Cranberries,6.9,448
+128,The Cranberries,2.5,232
+128,The Cranberries,3.4,46
+128,The Cranberries,3.5,58
+129,Cream,8,319
+129,Cream,6.7,277
+129,Cream,0.4,456
+130,Madonna,8.5,275
+130,Madonna,4.5,87
+130,Madonna,2.7,405
+130,Madonna,4.5,240
+130,Madonna,5.3,437
+130,Madonna,7.2,17
+131,Bauhaus,6.9,291
+131,Bauhaus,4.4,352
+131,Bauhaus,1.6,116
+131,Bauhaus,2.7,405
+132,Van Morrison,8.4,416
+132,Van Morrison,5.5,99
+132,Van Morrison,7.2,17
+132,Van Morrison,5.5,231
+132,Van Morrison,4.5,129
+133,R.E.M.,4.6,160
+133,R.E.M.,2,172
+133,R.E.M.,3.9,101
+133,R.E.M.,8.9,380
+133,R.E.M.,1.3,425
+133,R.E.M.,4.5,341
+133,R.E.M.,0.3,190
+133,R.E.M.,1.2,401
+133,R.E.M.,4.9,100
+133,R.E.M.,8.2,449
+134,Ed Sheeran,4.9,293
+134,Ed Sheeran,2.7,472
+134,Ed Sheeran,3.2,465
+134,Ed Sheeran,1.7,435
+134,Ed Sheeran,7.5,296
+134,Ed Sheeran,8.2,449
+134,Ed Sheeran,5.1,466
+135,Cat Anderson,4.7,45
+135,Cat Anderson,3.1,13
+135,Cat Anderson,5.1,70
+135,Cat Anderson,1.4,285
+135,Cat Anderson,1,49
+135,Cat Anderson,6.7,361
+136,The Pretenders,5.9,169
+136,The Pretenders,5.3,30
+136,The Pretenders,4.8,215
+136,The Pretenders,8.8,238
+136,The Pretenders,4.1,136
+136,The Pretenders,2,134
+136,The Pretenders,7.1,117
+136,The Pretenders,1.9,147
+137,Stone Roses,2.3,74
+137,Stone Roses,0.3,378
+137,Stone Roses,6.7,361
+137,Stone Roses,7.7,235
+137,Stone Roses,5.8,73
+137,Stone Roses,0.7,128
+137,Stone Roses,7.5,307
+138,Michael Jackson,4.4,352
+138,Michael Jackson,8.6,236
+138,Michael Jackson,8.8,167
+138,Michael Jackson,0,373
+138,Michael Jackson,3.6,182
+139,Marc Bolan,2.6,343
+139,Marc Bolan,4.7,94
+139,Marc Bolan,4.4,23
+139,Marc Bolan,6.5,26
+139,Marc Bolan,5.5,79
+139,Marc Bolan,2.2,332
+139,Marc Bolan,6.1,76
+140,Amy Winehouse,6.7,463
+140,Amy Winehouse,0.4,66
+140,Amy Winehouse,6,268
+141,The Cramps,0.4,80
+141,The Cramps,6,102
+141,The Cramps,5.2,346
+142,Rufus Wainwright,5,204
+142,Rufus Wainwright,6,39
+143,Noel Gallagher,5.1,70
+143,Noel Gallagher,0.1,478
+143,Noel Gallagher,5.2,184
+143,Noel Gallagher,3.6,323
+143,Noel Gallagher,5,480
+143,Noel Gallagher,8.1,193
+144,Devo,5.3,30
+144,Devo,0,148
+144,Devo,7.5,244
+144,Devo,7,118
+144,Devo,8.4,452
+144,Devo,5.8,73
+144,Devo,3.5,52
+144,Devo,2.9,178
+145,Morrissey,5.8,9
+145,Morrissey,4.7,94
+145,Morrissey,0.1,478
+145,Morrissey,3.5,58
+145,Morrissey,4.2,50
+145,Morrissey,4.9,234
+145,Morrissey,1.3,388
+145,Morrissey,6.4,246
+145,Morrissey,3.8,289
+145,Morrissey,2.9,206
+146,Dr Feelgood,8.9,363
+146,Dr Feelgood,2.7,63
+146,Dr Feelgood,7.7,235
+146,Dr Feelgood,0.3,415
+146,Dr Feelgood,8.3,216
+146,Dr Feelgood,5.1,270
+146,Dr Feelgood,3.4,46
+146,Dr Feelgood,0.3,324
+146,Dr Feelgood,8.3,406
+146,Dr Feelgood,8.1,5
+146,Dr Feelgood,8.1,311
+147,Cat Stevens,0.7,127
+147,Cat Stevens,5.8,241
+147,Cat Stevens,8.5,349
+147,Cat Stevens,1.9,198
+147,Cat Stevens,0.7,157
+147,Cat Stevens,0.1,144
+148,The Cure,1.7,309
+148,The Cure,2.6,343
+149,David Gilmour,0.1,111
+149,David Gilmour,6.9,392
+149,David Gilmour,4,36
+149,David Gilmour,4.5,341
+149,David Gilmour,2.6,343
+149,David Gilmour,4.8,430
+149,David Gilmour,8.1,109
+149,David Gilmour,6.4,383
+150,Nina Simone,6.2,385
+150,Nina Simone,2.5,162
+150,Nina Simone,0.4,253
+150,Nina Simone,4.8,104
+150,Nina Simone,2.5,232
+150,Nina Simone,3.5,58
+150,Nina Simone,8.5,275
+151,Flaming Lips,8.3,431
+151,Flaming Lips,1.3,479
+151,Flaming Lips,2.1,12
+152,B.B. King,1.4,440
+152,B.B. King,4.4,352
+152,B.B. King,7.5,296
+152,B.B. King,3.6,411
+152,B.B. King,2.2,332
+152,B.B. King,5,436
+152,B.B. King,4,16
+152,B.B. King,0.4,80
+152,B.B. King,4.3,191
+153,Frank Zappa,2.5,397
+153,Frank Zappa,4.3,166
+153,Frank Zappa,7.4,164
+153,Frank Zappa,7.6,242
+153,Frank Zappa,7.8,464
+153,Frank Zappa,4.8,459
+154,Oasis,3.2,337
+154,Oasis,3.4,303
+154,Oasis,0,335
+154,Oasis,4.9,234
+154,Oasis,4.9,260
+154,Oasis,8.5,275
+154,Oasis,3.5,52
+154,Oasis,2.8,432
+154,Oasis,7.4,1
+155,The Mars Volta,4.4,330
+155,The Mars Volta,3.9,135
+155,The Mars Volta,1.1,223
+155,The Mars Volta,7.8,374
+155,The Mars Volta,7.8,315
+155,The Mars Volta,6.9,448
+155,The Mars Volta,5.6,249
+155,The Mars Volta,2,134
+155,The Mars Volta,8.8,209
+156,PJ Harvey,5.4,355
+156,PJ Harvey,6.8,228
+156,PJ Harvey,1.3,388
+156,PJ Harvey,7.1,117
+156,PJ Harvey,2.5,359
+156,PJ Harvey,6.1,451
+156,PJ Harvey,6.6,123
+156,PJ Harvey,6.7,463
+157,Florence and the Machine,5.2,194
+157,Florence and the Machine,1.5,243
+157,Florence and the Machine,0.6,295
+157,Florence and the Machine,6.6,123
+157,Florence and the Machine,2.9,206
+158,Kiss,3.8,7
+158,Kiss,2.7,390
+158,Kiss,1.2,401
+158,Kiss,7.5,296
+158,Kiss,0.5,412
+158,Kiss,0.1,427
+158,Kiss,6.7,463
+159,Cootie Williams,1.2,146
+159,Cootie Williams,4.1,274
+159,Cootie Williams,2.3,74
+159,Cootie Williams,2.5,152
+159,Cootie Williams,4.8,459
+159,Cootie Williams,5.1,466
+159,Cootie Williams,4.8,368
+159,Cootie Williams,7.8,315
+160,Joni Mitchell,0.3,415
+160,Joni Mitchell,0.5,320
+160,Joni Mitchell,3,262
+160,Joni Mitchell,2.7,267
+160,Joni Mitchell,6.9,372
+160,Joni Mitchell,4.4,222
+160,Joni Mitchell,1,163
+160,Joni Mitchell,8.1,279
+160,Joni Mitchell,5.6,426
+161,Mumford and Sons,5.3,283
+161,Mumford and Sons,5.5,280
+161,Mumford and Sons,5.4,176
+162,The Police,2.7,390
+162,The Police,8.2,422
+162,The Police,3.6,269
+162,The Police,7.5,181
+162,The Police,5,204
+163,Bob Dylan,6.1,286
+163,Bob Dylan,7.4,210
+163,Bob Dylan,4.5,93
+163,Bob Dylan,1.5,243
+163,Bob Dylan,1.4,395
+163,Bob Dylan,0.1,298
+163,Bob Dylan,1.9,248
+163,Bob Dylan,5.1,270
+163,Bob Dylan,6,39
+163,Bob Dylan,0.6,126
+164,The Faces,2.8,310
+164,The Faces,3.8,468
+164,The Faces,6.9,454
+164,The Faces,5.9,169
+164,The Faces,5,255
+164,The Faces,8.1,279
+164,The Faces,3.9,376
+164,The Faces,8.7,186
+164,The Faces,1.3,479
+164,The Faces,7.2,314
+164,The Faces,1.7,356
+165,Marianne Faithfull,4.8,430
+165,Marianne Faithfull,1.7,356
+165,Marianne Faithfull,8.7,186
+165,Marianne Faithfull,7.8,407
+165,Marianne Faithfull,5.9,89
+165,Marianne Faithfull,2.8,282
+165,Marianne Faithfull,6.1,318
+165,Marianne Faithfull,1.9,248
+165,Marianne Faithfull,6.6,123
+166,Horace Silver,6.9,392
+166,Horace Silver,2.8,44
+167,Johnny Cash,3.6,323
+167,Johnny Cash,7.2,192
+167,Johnny Cash,8.3,474
+167,Johnny Cash,5.5,280
+167,Johnny Cash,3.5,52
+168,John Lydon,6.9,471
+168,John Lydon,7.1,348
+168,John Lydon,2,134
+168,John Lydon,3.6,323
+168,John Lydon,7.2,17
+168,John Lydon,1.5,317
+168,John Lydon,4.5,240
+169,Elvis Costello,4.8,150
+169,Elvis Costello,6.7,189
+169,Elvis Costello,6.8,272
+169,Elvis Costello,6.4,53
+169,Elvis Costello,4.4,393
+169,Elvis Costello,1.2,351
+169,Elvis Costello,5.8,73
+169,Elvis Costello,4.1,55
+169,Elvis Costello,0.2,304
+170,James Brown,4.7,294
+170,James Brown,2.3,224
+170,James Brown,4.8,430
+170,James Brown,3.9,165
+170,James Brown,8.1,311
+170,James Brown,6.8,228
+170,James Brown,0.1,478
+170,James Brown,4.7,225
+171,Yumi Matsutoya,4.2,410
+171,Yumi Matsutoya,7.9,445
+171,Yumi Matsutoya,0.6,295
+171,Yumi Matsutoya,6.3,86
+171,Yumi Matsutoya,8.7,186
+171,Yumi Matsutoya,2.9,178
+171,Yumi Matsutoya,0.7,157
+171,Yumi Matsutoya,6.9,291
+172,Tina Turner,5.9,169
+172,Tina Turner,6.9,37
+173,Catherine Wheel,4.5,287
+173,Catherine Wheel,8.1,434
+173,Catherine Wheel,4.7,475
+174,Neil Young,2.8,282
+174,Neil Young,2.3,203
+175,Kasabian,8.2,422
+175,Kasabian,2.3,74
+175,Kasabian,2.6,92
+175,Kasabian,6.4,383
+175,Kasabian,9,284
+175,Kasabian,2.3,442
+175,Kasabian,5.8,421
+175,Kasabian,4.2,410
+175,Kasabian,3.8,468
+175,Kasabian,4.4,358
+175,Kasabian,0,201
+176,Run-D.M.C.,6.3,218
+176,Run-D.M.C.,2,219
+176,Run-D.M.C.,2.7,472
+177,Tom Jones,5.4,158
+177,Tom Jones,2.8,326
+177,Tom Jones,3.8,7
+177,Tom Jones,8.2,220
+177,Tom Jones,0.2,68
+177,Tom Jones,6.4,53
+178,Thin Lizzy,7.4,429
+178,Thin Lizzy,7.8,407
+179,Alan Parsons,1.2,146
+179,Alan Parsons,4.9,260
+179,Alan Parsons,5.8,122
+179,Alan Parsons,7.2,252
+179,Alan Parsons,5.1,70
+179,Alan Parsons,8.2,423
+179,Alan Parsons,2.1,12
+180,Squeeze,0.3,378
+180,Squeeze,4.5,341
+180,Squeeze,2,179
+180,Squeeze,2.4,322
+180,Squeeze,7.1,348

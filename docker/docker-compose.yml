@@ -9,6 +9,7 @@ services:
       - ../data/:/app/data/ # Mount the data
     environment:
       - DATABASE_URL=sqlite:///data/orders.db
+      - LOCATION_ID=1 # put as an environment variable
 
   streamlit:
     build:

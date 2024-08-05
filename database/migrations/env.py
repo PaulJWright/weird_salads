@@ -3,6 +3,7 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
+from weird_salads.inventory.repository import models as inv_models  # noqa: 402
 from weird_salads.orders.repository import models as orders_models  # noqa: 402
 from weird_salads.utils.sqlalchemy_base import Base
 
