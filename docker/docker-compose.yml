@@ -10,7 +10,7 @@ services:
     environment:
       - DATABASE_URL=sqlite:///data/orders.db
       - SEED_LOCATION_ID=1 # location id for DB seeding
-      - SEED_QUANTITY=7.4 # quantity of ingredients for DB seeding
+      - SEED_QUANTITY=1000 # quantity of ingredients for DB seeding
 
   streamlit:
     build:

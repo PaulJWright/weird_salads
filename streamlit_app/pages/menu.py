@@ -3,8 +3,10 @@ import requests
 import streamlit as st
 
 
-# Function to fetch menu items
 def fetch_menu_items():
+    """
+    GET menu items
+    """
     try:
         response = requests.get("http://fastapi:8000/menu/")
         response.raise_for_status()
@@ -18,20 +20,32 @@ def fetch_menu_items():
         return []
 
 
-# Function to fetch availability of a specific menu item
-def fetch_item_availability(item_id):
+def place_order(item_id):
+    """
+    Place order, get order_id
+    """
     try:
-        response = requests.get(
-            f"http://fastapi:8000/menu/{item_id}/availability"
-        )  # Update endpoint if necessary
+        response = requests.post(
+            "http://fastapi:8000/order/", json={"menu_id": item_id}
+        )
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+        order_id = data.get("id", "unknown")
+        return f"Success, your order number is {order_id}, don't forget it!"
+    except requests.exceptions.HTTPError as http_err:
+        if response.status_code == 400:
+            # Handle specific client error (e.g., insufficient stock)
+            error_mesage = response.json().get("detail", "Sorry, out of stock")
+            if "InsufficientStockError" in error_mesage:
+                return "Sorry, out of stock"
+            return f"Order failed: {error_mesage}"
+        return f"HTTP error occurred: {http_err}"
     except requests.exceptions.RequestException as e:
-        st.write("Failed to connect to FastAPI:", e)
-        return None
+        st.write("Failed to place the order:", e)
+        return "Failed to place the order."
     except Exception as e:
         st.write("An error occurred:", e)
-        return None
+        return "An error occurred while placing the order."
 
 
 # Function to display menu items
@@ -53,24 +67,18 @@ def display_menu():
         df = df[df["on_menu"]]
         df["price"] = df["price"].apply(lambda x: f"${x:.2f}")
 
-        st.write("### Menu Items")
-
         for idx, row in df.iterrows():
             cols = st.columns([3, 1, 2])
 
             with cols[0]:
-                st.write(f"{row['name']} ({row['price']})")
+                st.write(f"{row['id']}. \t {row['name']} ({row['price']})")
 
             with cols[1]:
                 button_key = f"order_{row['id']}"
                 if st.button("Order", key=button_key):
-                    # Fetch availability when button is clicked
-                    availability = fetch_item_availability(row["id"])
-                    if availability and availability.get("available_portions", 0) >= 1:
-                        st.session_state.current_order = row["name"]
-                        st.session_state.order_status = "Order success!"
-                    else:
-                        st.session_state.order_status = "Sorry, that's out of stock"
+                    # Place the order and get the response
+                    st.session_state.order_status = place_order(row["id"])
+                    st.session_state.current_order = row["name"]
 
             with cols[2]:
                 if st.session_state.current_order == row["name"]:

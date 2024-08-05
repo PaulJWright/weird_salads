@@ -32,8 +32,5 @@ class OrdersRepository:
         records = query.all()
         return [Order(**record.dict()) for record in records]
 
-    def update(self, id):
-        pass
-
     def delete(self, id):
         pass

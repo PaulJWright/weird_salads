@@ -179,3 +179,9 @@ class CreateStockSchema(BaseModel):
 
     class Config:
         extra = "forbid"
+
+
+class UpdateStockSchema(BaseModel):
+    ingredient_id: int
+    quantity: Annotated[float, Field(le=0.0, strict=True)]  # negative values only
+    unit: UnitOfMeasure

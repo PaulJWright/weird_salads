@@ -12,3 +12,7 @@ class StockItemNotFoundError(Exception):
 
 class IngredientNotFoundError(Exception):
     pass
+
+
+class InsufficientStockError(Exception):
+    pass
