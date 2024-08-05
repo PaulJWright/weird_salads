@@ -7,6 +7,8 @@ from typing import List
 
 from pydantic import BaseModel
 
+# from typing_extensions import Annotated
+
 
 # Orders-related Schema for the API
 class CreateOrderSchema(BaseModel):
@@ -20,6 +22,7 @@ class GetOrderSchema(CreateOrderSchema):
     id: str  # changed to str (of UUID) to match how it is stored in SQLite
     created: datetime
 
+    # price: Annotated[float, Field(ge=0.0, strict=True)]
     class Config:
         extra = "forbid"
 
