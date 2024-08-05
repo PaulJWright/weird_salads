@@ -3,6 +3,7 @@ Pydantic Schemas for API
 """
 
 from datetime import datetime, timezone
+from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, Field, field_validator
@@ -30,13 +31,63 @@ class SimpleMenuItemSchema(BaseModel):
 
 
 # GET, now includes id...
-class GetMenuItemSchema(SimpleMenuItemSchema):
+# Simple (no ingredient info)
+class GetSimpleMenuItemSchema(SimpleMenuItemSchema):
     id: int
 
 
 # GET Menu (list of Menu items)
-class GetMenuSchema(BaseModel):
-    items: List[GetMenuItemSchema]
+# Simple (no ingredient info)
+class GetSimpleMenuSchema(BaseModel):
+    items: List[GetSimpleMenuItemSchema]
+
+    class Config:
+        extra = "forbid"
+
+
+# ----
+
+
+# Enum for unit of measure
+class UnitOfMeasure(str, Enum):
+    liter = "liter"
+    deciliter = "deciliter"
+    centiliter = "centiliter"
+    milliliter = "milliliter"
+
+
+# Schema for IngredientItem
+class IngredientItemSchema(BaseModel):
+    name: str
+    description: Optional[str] = None
+
+    class Config:
+        extra = "forbid"
+
+
+class GetIngredientItemSchema(IngredientItemSchema):
+    id: int
+
+    class Config:
+        extra = "forbid"
+
+
+# Schema for MenuItemIngredient
+class MenuItemIngredientSchema(BaseModel):
+    quantity: float
+    unit: UnitOfMeasure
+    ingredient: GetIngredientItemSchema
+
+    class Config:
+        extra = "forbid"
+
+
+# GET, now includes id and ingredients...
+class GetMenuItemSchema(GetSimpleMenuItemSchema):
+    id: int
+    ingredients: List[
+        MenuItemIngredientSchema
+    ]  # Include ingredients with the menu item
 
 
 # Orders-related Schema for the API

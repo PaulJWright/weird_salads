@@ -18,7 +18,7 @@ COPY ../database/ /app/database
 # https://setuptools-scm.readthedocs.io/en/latest/usage/
 # https://stackoverflow.com/questions/77572077/using-setuptools-scm-pretend-version-for-package-version-inside-docker-with-git
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_MY_PACKAGE=0.0
-RUN pip install --root-user-action=ignore --no-cache-dir .
+RUN pip install --root-user-action=ignore .
 
 ARG LOCATION_ID
 # Command to run FastAPI using Uvicorn

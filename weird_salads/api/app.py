@@ -1,8 +1,14 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from starlette import status
 
-from weird_salads.api.schemas import CreateOrderSchema  # noqa
-from weird_salads.api.schemas import GetMenuSchema, GetOrderSchema, GetOrdersSchema
+from weird_salads.api.schemas import (
+    CreateOrderSchema,
+    GetMenuItemSchema,
+    GetOrderSchema,
+    GetOrdersSchema,
+    GetSimpleMenuSchema,
+)
+from weird_salads.inventory.inventory_service.exceptions import MenuItemNotFoundError
 from weird_salads.inventory.inventory_service.inventory_service import MenuService
 from weird_salads.inventory.repository.inventory_repository import MenuRepository
 from weird_salads.orders.orders_service.orders_service import OrdersService
@@ -13,13 +19,27 @@ app = FastAPI()
 
 
 # Menu
-@app.get("/menu", response_model=GetMenuSchema, tags=["Menu"])
+@app.get("/menu", response_model=GetSimpleMenuSchema, tags=["Menu"])
 def get_menu():
     with UnitOfWork() as unit_of_work:
         repo = MenuRepository(unit_of_work.session)
         inventory_service = MenuService(repo)
         results = inventory_service.list_menu()
     return {"items": [result.dict() for result in results]}
+
+
+@app.get("/menu/{item_id}", response_model=GetMenuItemSchema, tags=["Menu"])
+def get_order(item_id: int):
+    try:
+        with UnitOfWork() as unit_of_work:
+            repo = MenuRepository(unit_of_work.session)
+            inventory_service = MenuService(repo)
+            order = inventory_service.get_item(item_id=item_id)
+        return order
+    except MenuItemNotFoundError:
+        raise HTTPException(
+            status_code=404, detail=f"Menu Item with ID {item_id} not found"
+        )
 
 
 # Orders
