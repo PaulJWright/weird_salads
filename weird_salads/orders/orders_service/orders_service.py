@@ -6,6 +6,7 @@ import requests
 from fastapi import HTTPException
 
 from weird_salads.api.schemas import UnitOfMeasure
+from weird_salads.inventory.inventory_service.exceptions import InsufficientStockError
 from weird_salads.orders.orders_service.exceptions import OrderNotFoundError
 from weird_salads.orders.repository.orders_repository import OrdersRepository
 
@@ -28,10 +29,7 @@ class OrdersService:
         )
 
         if not available_to_order:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Not enough stock available for menu ID {menu_id}",
-            )
+            raise InsufficientStockError("Sorry, this is out of stock.")
 
         # Place the order, then deduct stock (uow deals with the committing later)
         order = self.orders_repository.add(order_data)

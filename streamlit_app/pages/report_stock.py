@@ -4,7 +4,7 @@ import streamlit as st
 
 
 def display_stock_items():
-    st.title("Stock Items Report")
+    st.title("Report: Stock")
 
     try:
         # Fetch stock data from the FastAPI endpoint

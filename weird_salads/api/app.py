@@ -140,41 +140,6 @@ def create_stock(payload: CreateStockSchema):
     return return_payload
 
 
-# Orders
-@app.get(
-    "/order",
-    response_model=GetOrdersSchema,
-    tags=["Order"],
-)
-def get_orders():
-    with UnitOfWork() as unit_of_work:
-        repo = OrdersRepository(unit_of_work.session)
-        orders_service = OrdersService(repo)
-        results = orders_service.list_orders()
-    return {"orders": [result.dict() for result in results]}
-
-
-# Not sure if this is the best way or if we should be hitting endpoints.
-@app.post(
-    "/order",
-    status_code=status.HTTP_201_CREATED,
-    response_model=GetOrderSchema,
-    tags=["Order"],
-)
-def create_order(payload: CreateOrderSchema):
-    with UnitOfWork() as unit_of_work:
-        orders_repo = OrdersRepository(unit_of_work.session)
-        orders_service = OrdersService(orders_repo)
-
-        order_data = payload.model_dump()
-        order = orders_service.place_order(order_data)
-
-        unit_of_work.commit()  # Commit the order and stock deduction
-
-        return_payload = order.dict()
-    return return_payload
-
-
 # Approach:
 # -  HTTP Requests Between Services
 #
@@ -188,7 +153,7 @@ def create_order(payload: CreateOrderSchema):
 # -----
 
 
-@app.post("/inventory/update")
+@app.post("/inventory/update", tags=["Inventory"])
 def update_stock(payload: UpdateStockSchema):
     # UpdateStockSchema enforces quantity < 0 (only allows for deductions)
 
@@ -211,3 +176,45 @@ def update_stock(payload: UpdateStockSchema):
         raise HTTPException(status_code=500, detail=str(e))
     except Exception:
         raise HTTPException(status_code=500, detail="An unexpected error occurred")
+
+
+# Orders
+@app.get(
+    "/order",
+    response_model=GetOrdersSchema,
+    tags=["Order"],
+)
+def get_orders():
+    with UnitOfWork() as unit_of_work:
+        repo = OrdersRepository(unit_of_work.session)
+        orders_service = OrdersService(repo)
+        results = orders_service.list_orders()
+    return {"orders": [result.dict() for result in results]}
+
+
+# Not sure if this is the best way or if we should be hitting endpoints.
+@app.post(
+    "/order",
+    status_code=status.HTTP_201_CREATED,
+    response_model=GetOrderSchema,
+    tags=["Order"],
+)
+def create_order(payload: CreateOrderSchema):
+    try:
+        with UnitOfWork() as unit_of_work:
+            orders_repo = OrdersRepository(unit_of_work.session)
+            orders_service = OrdersService(orders_repo)
+
+            order_data = payload.model_dump()
+            order = orders_service.place_order(order_data)
+
+            unit_of_work.commit()  # Commit the order and stock deduction
+
+            return_payload = order.dict()
+        return return_payload
+    except InsufficientStockError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"An unexpected error occurred: {e}"
+        )

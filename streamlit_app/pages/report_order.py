@@ -4,9 +4,7 @@ import streamlit as st
 
 
 def display_order_report():
-    st.title("Weird Salads")
-
-    st.header("Order Report")
+    st.title("Report: Orders")
 
     try:
         response = requests.get("http://fastapi:8000/order/")
