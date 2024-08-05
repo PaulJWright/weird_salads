@@ -1,0 +1,2 @@
+class MenuItemNotFoundError(Exception):
+    pass

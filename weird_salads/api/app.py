@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from starlette import status
 
 from weird_salads.api.schemas import CreateOrderSchema  # noqa
-from weird_salads.api.schemas import GetOrderSchema, GetOrdersSchema
+from weird_salads.api.schemas import GetMenuSchema, GetOrderSchema, GetOrdersSchema
+from weird_salads.inventory.inventory_service.inventory_service import MenuService
+from weird_salads.inventory.repository.inventory_repository import MenuRepository
 from weird_salads.orders.orders_service.orders_service import OrdersService
 from weird_salads.orders.repository.orders_repository import OrdersRepository
 from weird_salads.utils.unit_of_work import UnitOfWork
@@ -10,6 +12,17 @@ from weird_salads.utils.unit_of_work import UnitOfWork
 app = FastAPI()
 
 
+# Menu
+@app.get("/menu", response_model=GetMenuSchema, tags=["Menu"])
+def get_menu():
+    with UnitOfWork() as unit_of_work:
+        repo = MenuRepository(unit_of_work.session)
+        inventory_service = MenuService(repo)
+        results = inventory_service.list_menu()
+    return {"items": [result.dict() for result in results]}
+
+
+# Orders
 @app.get(
     "/order",
     response_model=GetOrdersSchema,
