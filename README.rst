@@ -18,7 +18,7 @@ To get started, run the following (for a full breakdown, see `/docker/README.rst
 .. code:: bash
 
     curl -X 'GET' 'http://localhost:8000/order' -H 'accept: application/json'
-    {"orders":[]}
+    {"orders":[]} # empty because the DB is empty
 
 
 Developing
