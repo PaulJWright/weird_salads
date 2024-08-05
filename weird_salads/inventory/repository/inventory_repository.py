@@ -97,10 +97,10 @@ class MenuRepository:
         pass
 
     # - Stock-related
-    def _get_ingredient(self, id: int):
+    def _get_ingredient(self, ingredient_id: int):
         return (
             self.session.query(StockModel)
-            .filter(StockModel.ingredient_id == int(id))
+            .filter(StockModel.ingredient_id == int(ingredient_id))
             .all()
         )  # noqa: E501
 
@@ -129,3 +129,27 @@ class MenuRepository:
         record = StockModel(**item)
         self.session.add(record)
         return StockItem(**record.dict(), order_=record)
+
+    def _convert_to_model(self, stock_item: StockItem) -> StockModel:
+        return StockModel(
+            id=stock_item.id,
+            ingredient_id=stock_item.ingredient_id,
+            unit=stock_item.unit,
+            quantity=stock_item.quantity,
+            cost=stock_item.cost,
+            delivery_date=stock_item.delivery_date,
+            created_on=stock_item.created_on,
+        )
+
+    def update_ingredient(self, stock_items: List[StockItem]) -> None:
+        """
+        Update stock items in the session.
+        """
+        merged_records = []
+        for stock_item in stock_items:
+            record = StockModel(**stock_item.dict())
+
+            # Merge record with the session
+            merged_records.append(self.session.merge(record))
+
+        return merged_records

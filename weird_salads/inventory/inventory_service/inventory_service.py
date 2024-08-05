@@ -7,6 +7,7 @@ from typing import Any, Dict, List
 from weird_salads.api.schemas import UnitOfMeasure
 from weird_salads.inventory.inventory_service.exceptions import (
     IngredientNotFoundError,
+    InsufficientStockError,
     MenuItemNotFoundError,
     StockItemNotFoundError,
 )
@@ -153,3 +154,44 @@ class MenuService:
 
     def list_stock(self):  # needs options for filtering
         return self.menu_repository.list_stock()
+
+    # -- stock deduction
+    # !TODO check units
+    def deduct_stock(self, ingredient_id: int, quantity: float, unit: UnitOfMeasure):
+        """
+        Deduct a specific quantity of stock for a given item.
+        """
+        # Fetch the stock item(s) for the given item_id
+        stock_items = self.menu_repository.get_ingredient(ingredient_id)
+
+        if not stock_items:
+            raise StockItemNotFoundError(
+                f"No stock found for ingredient ID {ingredient_id}"
+            )
+
+        total_deducted = 0.0
+        quantity_to_deduct = quantity
+
+        for stock_item in stock_items:
+            if quantity_to_deduct <= 0:
+                break
+
+            available_quantity = stock_item.quantity
+            # !TODO fix the assumption that the quantity is in the stocks unit
+
+            quantity_deducted = min(quantity_to_deduct, available_quantity)
+            # Deduct the quantity
+            stock_item.quantity -= quantity_deducted
+            total_deducted += quantity_deducted
+            quantity_to_deduct -= quantity_deducted
+
+            # !TODO If stock item is depleted, remove it
+
+        if quantity_to_deduct > 0:
+            raise InsufficientStockError(
+                f"Not enough stock available to deduct {quantity_to_deduct} units"
+            )
+
+        self.menu_repository.update_ingredient(stock_items)
+
+        return total_deducted

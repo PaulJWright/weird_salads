@@ -11,9 +11,11 @@ from weird_salads.api.schemas import (
     GetSimpleMenuSchema,
     GetStockItemSchema,
     GetStockSchema,
+    UpdateStockSchema,
 )
 from weird_salads.inventory.inventory_service.exceptions import (
     IngredientNotFoundError,
+    InsufficientStockError,
     MenuItemNotFoundError,
     StockItemNotFoundError,
 )
@@ -152,6 +154,7 @@ def get_orders():
     return {"orders": [result.dict() for result in results]}
 
 
+# Not sure if this is the best way or if we should be hitting endpoints.
 @app.post(
     "/order",
     status_code=status.HTTP_201_CREATED,
@@ -160,10 +163,51 @@ def get_orders():
 )
 def create_order(payload: CreateOrderSchema):
     with UnitOfWork() as unit_of_work:
-        repo = OrdersRepository(unit_of_work.session)
-        orders_service = OrdersService(repo)
-        order = payload.model_dump()
-        order = orders_service.place_order(order)
-        unit_of_work.commit()  # this is when id and created are populated
+        orders_repo = OrdersRepository(unit_of_work.session)
+        orders_service = OrdersService(orders_repo)
+
+        order_data = payload.model_dump()
+        order = orders_service.place_order(order_data)
+
+        unit_of_work.commit()  # Commit the order and stock deduction
+
         return_payload = order.dict()
     return return_payload
+
+
+# Approach:
+# -  HTTP Requests Between Services
+#
+# Other Options:
+# - Mediator Pattern:
+#       This provides a clean interface between the services and maintains
+#       loose coupling by introducing a mediator that handles interactions.
+# - Event-Driven Architecture:
+#       This allows the OrdersService and MenuService to be completely decoupled,
+#       with interactions handled via events and event handlers.
+# -----
+
+
+@app.post("/inventory/update")
+def update_stock(payload: UpdateStockSchema):
+    # UpdateStockSchema enforces quantity < 0 (only allows for deductions)
+
+    try:
+        with UnitOfWork() as unit_of_work:
+            ingredient_id = payload.ingredient_id
+            quantity_to_deduct = abs(payload.quantity)
+            unit = payload.unit  # Enum value, no need to convert
+            inventory_repo = MenuRepository(unit_of_work.session)
+            inventory_service = MenuService(inventory_repo)
+
+            # Update stock quantity
+            total_deducted = inventory_service.deduct_stock(
+                ingredient_id, quantity_to_deduct, unit
+            )
+
+            unit_of_work.commit()
+        return {"status": "success", "total_deducted": total_deducted}
+    except InsufficientStockError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    except Exception:
+        raise HTTPException(status_code=500, detail="An unexpected error occurred")
