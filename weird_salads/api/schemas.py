@@ -12,9 +12,25 @@ from typing_extensions import Annotated
 # from typing_extensions import Annotated
 
 
+# =================================
 # Menu-related Schema for the API
-# Single Menu Item
+# =================================
+class UnitOfMeasure(str, Enum):
+    """
+    Enum for units of measure
+    """
+
+    liter = "liter"
+    deciliter = "deciliter"
+    centiliter = "centiliter"
+    milliliter = "milliliter"
+
+
 class SimpleMenuItemSchema(BaseModel):
+    """
+    Simple Menu Item (an overview).
+    """
+
     name: str
     description: Optional[str] = None
     price: Annotated[float, Field(ge=0.0, strict=True)]
@@ -31,29 +47,24 @@ class SimpleMenuItemSchema(BaseModel):
 
 
 # GET, now includes id...
-# Simple (no ingredient info)
 class GetSimpleMenuItemSchema(SimpleMenuItemSchema):
     id: int
 
 
 # GET Menu (list of Menu items)
-# Simple (no ingredient info)
 class GetSimpleMenuSchema(BaseModel):
+    """
+    Menu (GET)
+    """
+
     items: List[GetSimpleMenuItemSchema]
 
     class Config:
         extra = "forbid"
 
 
-# ----
-
-
-# Enum for unit of measure
-class UnitOfMeasure(str, Enum):
-    liter = "liter"
-    deciliter = "deciliter"
-    centiliter = "centiliter"
-    milliliter = "milliliter"
+# Ingredient-related things
+# -------------------------
 
 
 # Schema for IngredientItem
@@ -84,13 +95,19 @@ class MenuItemIngredientSchema(BaseModel):
 
 # GET, now includes id and ingredients...
 class GetMenuItemSchema(GetSimpleMenuItemSchema):
+    """
+    Menu Item detail (GET)
+    """
+
     id: int
     ingredients: List[
         MenuItemIngredientSchema
     ]  # Include ingredients with the menu item
 
 
+# =================================
 # Orders-related Schema for the API
+# =================================
 class CreateOrderSchema(BaseModel):
     menu_id: int
 
