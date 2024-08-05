@@ -5,7 +5,11 @@ Services
 from typing import Any, Dict, List
 
 from weird_salads.api.schemas import UnitOfMeasure
-from weird_salads.inventory.inventory_service.exceptions import MenuItemNotFoundError
+from weird_salads.inventory.inventory_service.exceptions import (
+    IngredientNotFoundError,
+    MenuItemNotFoundError,
+    StockItemNotFoundError,
+)
 from weird_salads.inventory.inventory_service.inventory import (
     MenuItem,
     MenuItemIngredient,
@@ -133,19 +137,19 @@ class MenuService:
     # ---- ingredient_id queries
     def get_ingredient(self, ingredient_id: int):
         ingredient_item = self.menu_repository.get_ingredient(ingredient_id)
-        if ingredient_item is not None:
+        if ingredient_item:
             return ingredient_item
-        raise ValueError(f"items with id {ingredient_id} not found")  # fix
+        raise IngredientNotFoundError(f"items with id {ingredient_id} not found")  # fix
 
     def ingest_stock(self, item):
-        return self.stock_repository.add_stock(item)
+        return self.menu_repository.add_stock(item)
 
     # ---- stock_id queries
     def get_stock_item(self, stock_id: str):
         stock_item = self.menu_repository.get_stock(stock_id)
         if stock_item is not None:
             return stock_item
-        raise ValueError(f"stock with id {stock_id} not found")  # fix
+        raise StockItemNotFoundError(f"stock with id {stock_id} not found")  # fix
 
     def list_stock(self):  # needs options for filtering
         return self.menu_repository.list_stock()

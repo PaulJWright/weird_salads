@@ -4,3 +4,11 @@ class MenuItemNotFoundError(Exception):
 
 class UnitConversionError(Exception):
     pass
+
+
+class StockItemNotFoundError(Exception):
+    pass
+
+
+class IngredientNotFoundError(Exception):
+    pass

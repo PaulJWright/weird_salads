@@ -106,18 +106,18 @@ class MenuRepository:
 
     def get_ingredient(self, id: int) -> List[StockItem]:
         ingredients = self._get_ingredient(id)
-        if ingredients is not None:
+        if ingredients:  # is not None:
             return [StockItem(**ingredient.dict()) for ingredient in ingredients]
 
     def _get_stock(self, id: str):
         return self.session.query(StockModel).filter(StockModel.id == id).first()
 
-    def get_stock(self, id_: str):
-        order = self._get(id)
+    def get_stock(self, id: str):
+        order = self._get_stock(id)
         if order is not None:
             return StockItem(**order.dict())
 
-    def list_stock(self, limit=None):
+    def list_stock(self, limit=None):  # need to implement limits
         query = self.session.query(StockModel)
         records = query.all()
         return [StockItem(**record.dict()) for record in records]
