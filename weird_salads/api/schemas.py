@@ -151,3 +151,31 @@ class GetOrdersSchema(BaseModel):
 
     class Config:
         extra = "forbid"
+
+
+class StockSchema(BaseModel):
+    ingredient_id: int
+    unit: UnitOfMeasure
+    quantity: Annotated[float, Field(ge=0.0, strict=True)]
+    cost: Annotated[float, Field(ge=0.0, strict=True)]
+    # expiry_date: datetime
+    delivery_date: Optional[datetime] = datetime.now(timezone.utc)
+    created_on: Optional[datetime] = datetime.now(timezone.utc)
+
+    class Config:
+        extra = "forbid"
+
+
+class GetStockItemSchema(StockSchema):
+    id: str
+
+
+class GetStockSchema(BaseModel):
+    items: List[GetStockItemSchema]
+
+
+class CreateStockSchema(BaseModel):
+    stock: StockSchema
+
+    class Config:
+        extra = "forbid"
