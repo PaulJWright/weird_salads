@@ -1,0 +1,481 @@
+ingredient_id,name,unit,cost
+1,Yoghurt,deciliter,3.03
+2,Arugula,deciliter,3.77
+3,Gula Melaka,deciliter,0.53
+4,Mahlab,centiliter,2.99
+5,Parmesan Cheese,milliliter,2.25
+6,Barberry,centiliter,2.35
+7,Juniper Berries,centiliter,3.6
+8,Lettuce,liter,2.96
+9,Fingerlime,centiliter,3.51
+10,Watermelon,liter,0.84
+11,Dashi,centiliter,0.72
+12,Rockmelon,centiliter,0.89
+13,Green Tea Noodles,centiliter,4
+14,Nashi Pear,liter,2.87
+15,Eggs,deciliter,1.95
+16,Corn Oil,milliliter,0.63
+17,Cranberry,milliliter,1.71
+18,Farmed Prawns,deciliter,3.52
+19,Apple Juice Concentrate,liter,2.93
+20,Pine Nut,liter,3.09
+21,Chia Seeds,deciliter,3.7
+22,Kiwi Fruit,liter,0.8
+23,Turkey,liter,0.05
+24,Chickpea,deciliter,3.02
+25,Sesame Seeds,deciliter,0.57
+26,Cannellini Beans,deciliter,1.94
+27,Kumera,centiliter,3.79
+28,Dried Chinese Broccoli,milliliter,0.98
+29,Tinned,centiliter,3.26
+30,Kidneys,liter,2.37
+31,Broccoli,liter,2.11
+32,Mackerel,liter,0.95
+33,Borlotti Beans,deciliter,2.32
+34,Rhubarb,deciliter,0.29
+35,Spelt,deciliter,3.07
+36,Sunflower Seeds,deciliter,1.25
+37,Papaya,milliliter,3.7
+38,Cocoa Powder,deciliter,2.75
+39,Haloumi,deciliter,2.65
+40,Blueberries,centiliter,2.51
+41,Clams,deciliter,2.06
+42,Wholegrain Bread,milliliter,1.62
+43,Arrowroot,deciliter,4
+44,Tea Oil,deciliter,1.56
+45,Polenta,centiliter,0.11
+46,Blackberries,milliliter,3.81
+47,Kidney Beans,milliliter,3.24
+48,Cherries,liter,3.25
+49,Canola Oil,liter,3.63
+50,Pumpkin Seed,liter,2.51
+51,Kudzu,milliliter,2.74
+52,Peaches,deciliter,2.19
+53,Pork,liter,0.03
+54,Tomatoes,milliliter,2.79
+55,Hijiki,milliliter,3.63
+56,Ham,milliliter,0.17
+57,Lime Leaves,deciliter,2.91
+58,Brown Rice,milliliter,1.2
+59,Rice Paper,centiliter,0.65
+60,Plums,deciliter,2.9
+61,Salmon,centiliter,2.55
+62,Fruit,deciliter,0.62
+63,Scallops,centiliter,2
+64,Goat Cheese,liter,1.33
+65,Berries,deciliter,2.07
+66,Apples,centiliter,1.06
+67,Shiitake Mushrooms,deciliter,0.16
+68,Vanilla Beans,centiliter,3.62
+69,Safflower Oil,liter,0.34
+70,Buckwheat Noodles,centiliter,3.99
+71,Apple Juice,milliliter,0.68
+72,Honey,milliliter,2.07
+73,Olive Oil,centiliter,0.93
+74,Paprik,centiliter,2.87
+75,Wakame,deciliter,2.07
+76,Peppermint,milliliter,2.46
+77,Trout,milliliter,0.36
+78,Annatto Seed,centiliter,2.8
+79,Rye,liter,1.28
+80,Cavalo,liter,0.58
+81,Besan,milliliter,0.93
+82,Pears,milliliter,2.17
+83,Squash,centiliter,3.4
+84,Star Anise,milliliter,3.46
+85,Butternut Lettuce,milliliter,3.04
+86,Fennel Seeds,milliliter,3.23
+87,Malt Vinegar,liter,0.05
+88,Brazil Nut,centiliter,3.49
+89,Soy Beans,centiliter,1.2
+90,Rye Bread,milliliter,0.04
+91,Ricotta,deciliter,3.2
+92,Cassia bark,centiliter,2.61
+93,Galangal,milliliter,0.17
+94,Loquats,centiliter,2.8
+95,Hokkien Noodles,centiliter,1.12
+96,Brie,deciliter,3
+97,Cos Lettuce,milliliter,3.84
+98,Corella Pear,milliliter,2.58
+99,Pepitas,deciliter,1.93
+100,Apple Cider Vinegar,centiliter,2.82
+101,Tom Yum,milliliter,1.25
+102,Arborio Rice,milliliter,0.67
+103,Hazelnut,liter,2.71
+104,Raspberry,centiliter,2.19
+105,Eggplant,centiliter,1.01
+106,Onion,milliliter,3.03
+107,Pinto Beans,deciliter,3.79
+108,Mastic,centiliter,3.74
+109,Nutritional Yeast,milliliter,3.33
+110,Tapioca,milliliter,1.35
+111,English Spinach,centiliter,3.19
+112,Pear Juice,milliliter,2.88
+113,Oranges,deciliter,3.83
+114,Watercress,liter,1.74
+115,Mint,liter,3.32
+116,Kenchur,centiliter,1
+117,Yogurt,liter,2.03
+118,Red Wine,milliliter,2.44
+119,Molasses,liter,2.12
+120,Omega Spread,milliliter,2.53
+121,Alfalfa,liter,3.94
+122,Dark Chocolate,liter,2.6
+123,Gruyere,deciliter,3.6
+124,Soy Milk,milliliter,1.24
+125,Red Cabbage,milliliter,1.72
+126,Oyster Sauce,liter,2.57
+127,Bulghur,deciliter,0.33
+128,Cardamom,deciliter,3.25
+129,Mullet,centiliter,1.29
+130,Star Fruit,centiliter,0.78
+131,Mussels,milliliter,1.62
+132,Milk Chocolate,liter,0.15
+133,Squid,liter,2.19
+134,Cucumber,centiliter,0.11
+135,Rice Noodles,liter,0.15
+136,Blue Swimmer Crab,milliliter,2.32
+137,Pasta,centiliter,1.38
+138,Currants,milliliter,1.53
+139,Balsamic Vinegar,milliliter,2.76
+140,Bamboo Shoots,centiliter,0.66
+141,Common Cultivated Mushrooms,deciliter,2.51
+142,Oyster Mushrooms,deciliter,3.63
+143,Flaxseed Oil,centiliter,0.91
+144,Taleggio Cheese,deciliter,2.73
+145,Garlic,liter,0.85
+146,Cashews,centiliter,3.85
+147,Shark,liter,2.54
+148,Red Wine Vinegar,deciliter,2.63
+149,Fish Stock,deciliter,1.44
+150,Soy,liter,1.37
+151,Yellowtail Kingfish,centiliter,2.58
+152,Cous Cous,milliliter,2.49
+153,Blue Eye Trevalla,centiliter,1.77
+154,Camomile,milliliter,3.5
+155,Vegetable Spaghetti,deciliter,0.86
+156,Sweet Potato,deciliter,0.26
+157,Peppers,milliliter,3.84
+158,Licorice,milliliter,2.33
+159,Blue Cheese,milliliter,1.26
+160,Snapper,milliliter,0.85
+161,Persimmon,deciliter,2.72
+162,Flour,milliliter,1.59
+163,Black Eyed Beans,liter,0.15
+164,Quinoa,milliliter,0.06
+165,Sprouts,deciliter,3.63
+166,Guava,centiliter,3.68
+167,Brown Flour,milliliter,3.4
+168,Basil Basmati Rice,liter,1.84
+169,Buckwheat,centiliter,3.04
+170,Lentils,centiliter,2.39
+171,Turnips,milliliter,2.24
+172,Dried Apricots,centiliter,2.18
+173,Cottage Cheese,deciliter,0.68
+174,Parsley,centiliter,3.1
+175,Smoked Trout,milliliter,1.05
+176,Provolone,deciliter,3.97
+177,Lychees,liter,3
+178,Allspice,milliliter,1.17
+179,Wasabi,centiliter,1.25
+180,Jicama,liter,3.01
+181,Brussels Sprouts,centiliter,0.34
+182,Mung Beans,liter,0.39
+183,Barley,centiliter,3.25
+184,Tangelo,centiliter,1.19
+185,Fromage Blanc,deciliter,2.36
+186,Mountain Bread,deciliter,3.89
+187,Thyme,centiliter,3.85
+188,Wholewheat Flour,deciliter,0.8
+189,Capers,liter,2.2
+190,Longan,deciliter,1.82
+191,Purple Rice,liter,1.22
+192,Whiting Wild Rice,milliliter,1.36
+193,Kale,milliliter,3.66
+194,Sardines,deciliter,2.23
+195,Feijoa,centiliter,3.67
+196,Tahini,centiliter,1.12
+197,Mango,centiliter,1
+198,Tamari,milliliter,2.66
+199,Amaranth,milliliter,1.9
+200,Goat Milk,liter,1.01
+201,Macadamia Nut,deciliter,3.95
+202,Slivered Almonds,deciliter,3.43
+203,Red Pepper,milliliter,1.18
+204,Oats,milliliter,2.76
+205,Cloves,liter,1.05
+206,Coconut Water,milliliter,3.23
+207,Bran,liter,3.1
+208,Cayenne,milliliter,0.19
+209,Almond Oil,liter,0.43
+210,Okra,liter,2.02
+211,Oregano,deciliter,3.11
+212,Maple Syrup,liter,0.84
+213,Bonito Flakes,milliliter,2.59
+214,Vegetable Oil,deciliter,0.93
+215,White Bread,milliliter,0.93
+216,Aubergine,deciliter,1.44
+217,Albacore Tuna,liter,0.57
+218,Chilli Pepper,milliliter,3.58
+219,Cornmeal,centiliter,0.45
+220,Soy Flour,liter,0.43
+221,Carrot,centiliter,2.28
+222,Cacao,deciliter,0.94
+223,Amchur,liter,3.02
+224,Marigold,centiliter,0.7
+225,Tea,deciliter,0.68
+226,Cake,deciliter,3.02
+227,Coffee,liter,1.72
+228,Rosemary,milliliter,2.12
+229,Radicchio,liter,0.79
+230,Kohlrabi,centiliter,0.82
+231,Melon,liter,1.15
+232,Mace,centiliter,0.31
+233,Rice Syrup,deciliter,2.57
+234,Mahi Mahi,milliliter,0.08
+235,Chestnut,centiliter,3.49
+236,Flounder,milliliter,0.26
+237,Cheddar,milliliter,3.62
+238,Baking Soda,deciliter,0.77
+239,Bok Choy,liter,0.02
+240,Tarragon,milliliter,1.11
+241,Asian Greens,centiliter,1.87
+242,Choy Sum,deciliter,3.33
+243,Limes,liter,2.81
+244,Tempeh,liter,1.59
+245,Chickory,deciliter,1.73
+246,Walnut,liter,1.42
+247,Purple Carrot,centiliter,2.79
+248,Parrotfish,centiliter,2.33
+249,Dates,deciliter,2.37
+250,Potato Flour,milliliter,1.1
+251,Elderberry,liter,1.61
+252,Hummus,liter,3.64
+253,Kecap Manis,centiliter,1.23
+254,Dill,deciliter,1.42
+255,Marjoram,liter,3.42
+256,Radish,deciliter,2.24
+257,Pistachio Nut,deciliter,2.93
+258,Hiramasa Kingfish,centiliter,2.11
+259,Vermicelli Noodles,liter,3.77
+260,Saffron,deciliter,2.13
+261,Green Pepper,liter,2.39
+262,Tapioca Flour,milliliter,2.48
+263,Lobster,deciliter,1.45
+264,Sesame Oil,liter,0.91
+265,Asparagus,milliliter,1.73
+266,Vegetable Stock,milliliter,0.8
+267,Coriander Seed,liter,2.15
+268,Jewfish,centiliter,0.92
+269,Fresh Chillies,liter,1.77
+270,Adzuki Beans,centiliter,1.71
+271,Curry Leaves,milliliter,0.09
+272,Bean Shoots,deciliter,3.49
+273,Feta,centiliter,3.17
+274,Cauliflower,liter,0.14
+275,Nectarines,deciliter,3.99
+276,Celery Seed,deciliter,2.84
+277,Soymilk,centiliter,0.47
+278,Bacon,deciliter,0.27
+279,Chicken Stock,centiliter,0.16
+280,Honeydew Melon,deciliter,2.57
+281,Avocado Spread,deciliter,2.89
+282,Camellia Tea Oil,liter,1.45
+283,Lemongrass,deciliter,2.58
+284,Cream Cheese,liter,1.56
+285,File Powder,centiliter,0.1
+286,Red Lentils,deciliter,2.16
+287,Cinnamon,liter,2.54
+288,Fish Sauce,centiliter,2.78
+289,Muesli,centiliter,0.79
+290,Pear,milliliter,1.91
+291,Kokam,liter,2.15
+292,Aniseed,milliliter,2.26
+293,Grape Seed Oil,liter,0.92
+294,Garam Masala,deciliter,3.24
+295,Edam,liter,3.39
+296,Artichoke,centiliter,0.23
+297,Rice Flour,centiliter,2.78
+298,Barramundi,centiliter,2.54
+299,Flat Mushrooms,centiliter,1.95
+300,Mustard,milliliter,2.75
+301,Crabs,liter,2.88
+302,Almonds,liter,1.13
+303,Brown Mushrooms,milliliter,1.63
+304,Cumin,deciliter,0.36
+305,Chives,liter,1.42
+306,Mustard Seed,deciliter,2.77
+307,Oat Flour,deciliter,1.4
+308,Water,milliliter,0.67
+309,Calamari,milliliter,3.15
+310,Endive,liter,1.54
+311,Jarrahdale Pumpkin,milliliter,1.24
+312,Pineapple,centiliter,0.57
+313,Monkfish,milliliter,3.6
+314,Jasmine Rice,deciliter,2.69
+315,Celery,liter,1.22
+316,Horseradish,milliliter,2.86
+317,Leeks,deciliter,1.06
+318,Enoki Mushrooms,milliliter,1.42
+319,Edamame,milliliter,2.11
+320,William Pear,liter,3.91
+321,Porcini Mushrooms,centiliter,0.54
+322,Liver,centiliter,3.34
+323,Dragonfruit,deciliter,2.76
+324,Chicken,liter,2.29
+325,Turmeric,deciliter,0.66
+326,Avocado Oil,centiliter,0.43
+327,Sultanas,centiliter,3.55
+328,Rose Water,milliliter,3.67
+329,Mandarins,liter,1.85
+330,Spelt Bread,milliliter,3.98
+331,Unbleached Flour,liter,1.95
+332,Wheat,deciliter,3.13
+333,Bay Leaves,centiliter,3.64
+334,Sun-Dried Tomatoes,centiliter,2.58
+335,Brown Rice Vinegar,milliliter,1.98
+336,Figs,deciliter,3.12
+337,Ajowan Seed,liter,0.06
+338,Camembert,centiliter,1.91
+339,Yellow Papaw,centiliter,1.12
+340,White rice,centiliter,1.44
+341,Yeast,deciliter,0.5
+342,Flaxseed,milliliter,2.49
+343,Greenwheat Freekeh,centiliter,0.7
+344,Baking Powder,deciliter,1.44
+345,Blood Oranges,milliliter,3.64
+346,Pumpkin,liter,1.77
+347,Passionfruit,milliliter,3.97
+348,Extra Virgin Olive Oil,deciliter,2.18
+349,Banana,liter,1.07
+350,Kombu,liter,0.18
+351,Kiwi Berries,liter,0.86
+352,Cantaloupe,liter,2.44
+353,Butter Beans,liter,1.3
+354,Jelly,liter,1.65
+355,Coconut,liter,1.22
+356,Incaberries,deciliter,0.8
+357,Snowpeas,milliliter,3.79
+358,Buckwheat Flour,centiliter,3.05
+359,Corn Syrup,milliliter,3.75
+360,Tabasco,deciliter,1.19
+361,Swiss Chard,deciliter,3.83
+362,Avocado,milliliter,3.82
+363,Margarine,centiliter,3.7
+364,Asian Noodles,centiliter,1.2
+365,Swordfish,deciliter,0.86
+366,Bocconcini,centiliter,2.12
+367,Beef Stock,milliliter,1.3
+368,Caraway Seed,milliliter,1.68
+369,Semolina,liter,2.34
+370,Curry Powder,deciliter,0.11
+371,Cabbage,deciliter,3.68
+372,Zucchini,deciliter,2.07
+373,Duck,deciliter,0.83
+374,Vinegar,milliliter,3.31
+375,Wattleseed,milliliter,2.04
+376,Macadamia Oil,liter,2.94
+377,Anchovies,centiliter,3.4
+378,Tamarillo,centiliter,0.53
+379,Hot Smoked Salmon,deciliter,1.57
+380,Dandelion,milliliter,3.27
+381,Miso,milliliter,3.44
+382,Jerusalem Artichoke,liter,3.94
+383,Cream,centiliter,0.37
+384,Chinese Five Spice,deciliter,0.74
+385,Octopus,liter,0.03
+386,Agar,deciliter,2.71
+387,White Wine,deciliter,0.9
+388,Nutmeg,deciliter,3.4
+389,Poppy Seed,milliliter,2.64
+390,Apricots,liter,0.52
+391,Fennel,milliliter,3.47
+392,Sage,centiliter,2.72
+393,Peppercorns,deciliter,0.24
+394,Cumquat,milliliter,1.69
+395,Butter,liter,2.82
+396,Spinach,deciliter,2.63
+397,Nasturtium,centiliter,0.13
+398,Oatmeal,centiliter,2.06
+399,Green Beans,deciliter,3.72
+400,Flathead,liter,2.75
+401,Pecan Nut,centiliter,3.78
+402,Papaw,milliliter,0.74
+403,Raisin,liter,0.26
+404,Starfruit,milliliter,0.56
+405,Bush Tomato,milliliter,2.91
+406,Soba,milliliter,3.83
+407,Snowpea sprouts,centiliter,0.62
+408,Koshihikari Rice,centiliter,0.09
+409,Peas,milliliter,1.42
+410,Buttermilk,deciliter,2.36
+411,Lotus Root,milliliter,3.59
+412,Agave Syrup,centiliter,1.32
+413,Harissa,centiliter,1.97
+414,Sweet Chilli Sauce,deciliter,1.62
+415,Asafoetida,deciliter,2.47
+416,Fenugreek,liter,2.43
+417,Broccolini,liter,1.58
+418,Silverbeet,liter,0.72
+419,Iceberg Lettuce,liter,0.68
+420,Pomegranate,centiliter,3.57
+421,Beef,milliliter,3.69
+422,Lavender Flowers,centiliter,3.56
+423,Nuts,milliliter,1.22
+424,Nori,centiliter,0.83
+425,Cornichons,liter,1.27
+426,Olives,centiliter,1.85
+427,Corn Tortilla,deciliter,0.74
+428,Sake,liter,3.54
+429,Spring Onions,deciliter,3.98
+430,Pandanus Leaves,centiliter,3.36
+431,Wholemeal,milliliter,2.33
+432,French Eschallots,centiliter,3.02
+433,Potatoes,centiliter,0.19
+434,White Wine Vinegar,milliliter,2.61
+435,Szechuan Pepperberry,deciliter,1.75
+436,Tuna,liter,2.51
+437,Tofu,centiliter,3.73
+438,Lemon,deciliter,3.88
+439,Custard Apples,centiliter,2.03
+440,Coconut Oil,liter,1.78
+441,Green Tea,milliliter,0.98
+442,Grapefruit,milliliter,3.01
+443,Quark Quinc,deciliter,0.36
+444,Beetroot,deciliter,2.87
+445,Achacha,milliliter,2.28
+446,Sea Salt,liter,2.45
+447,Candle Nut,centiliter,2.63
+448,Stevia,deciliter,2.74
+449,Mozzarella,liter,2.77
+450,Freekeh,liter,0.27
+451,Prunes,liter,0.01
+452,Morwong,deciliter,1
+453,Haricot Beans,centiliter,0.84
+454,Ricemilk,liter,3.18
+455,Redfish,centiliter,2.12
+456,Wheatgrass Juice,liter,0.94
+457,Oysters,deciliter,2.96
+458,Warehou,centiliter,1.5
+459,Sugar,liter,3.31
+460,Peanuts,deciliter,3.26
+461,Beans,milliliter,2.73
+462,Bread,deciliter,1.27
+463,Soy Sauce,deciliter,0.49
+464,Mulberries,deciliter,1.75
+465,Chinese Cabbage,milliliter,0.71
+466,Parsnip,milliliter,0.94
+467,White Flour,milliliter,0.09
+468,Goji Berry,milliliter,0.18
+469,Bonza,milliliter,2.67
+470,Bean Sprouts,milliliter,1.29
+471,Kangaroo,centiliter,0
+472,Capsicum,liter,1.5
+473,Grapes,centiliter,1.29
+474,Sour Dough Bread,deciliter,2
+475,Coriander Leaves,milliliter,0.84
+476,Mangosteens,centiliter,0.53
+477,Butternut Pumpkin,milliliter,0.1
+478,Sausages,milliliter,1.98
+479,Carob Carrot,liter,2.9
+480,Milk,milliliter,3.25
