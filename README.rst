@@ -20,6 +20,7 @@ To get started, run the following (for a full breakdown, see `/docker/README.rst
     curl -X 'GET' 'http://localhost:8000/order' -H 'accept: application/json'
     {"orders":[]} # empty because the DB is empty
 
+The SQlite DB can be found at `/data/orders.db`, and can easily viewed through a GUI, e.g. https://sqlitebrowser.org/dl/
 
 Developing
 ==========
