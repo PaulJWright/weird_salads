@@ -5,6 +5,10 @@ services:
       dockerfile: docker/Dockerfile # Main Service
     ports:
       - "8000:8000"
+    volumes:
+      - ../data/:/app/data/ # Mount the data
+    environment:
+      - DATABASE_URL=sqlite:///data/orders.db
 
   streamlit:
     build:

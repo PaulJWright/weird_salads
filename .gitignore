@@ -32,6 +32,9 @@ weird_salads/_version.py
 *.manifest
 *.spec
 
+# data
+data/orders.db
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
