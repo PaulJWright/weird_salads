@@ -138,7 +138,7 @@ class MenuService:
         raise ValueError(f"items with id {ingredient_id} not found")  # fix
 
     def ingest_stock(self, item):
-        return self.stock_repository.add_stock(item)
+        return self.menu_repository.add_stock(item)
 
     # ---- stock_id queries
     def get_stock_item(self, stock_id: str):
