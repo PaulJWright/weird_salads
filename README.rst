@@ -24,18 +24,25 @@ The following example during initialisation, shows that the seeding process is c
     fastapi-1    | INFO - Starting data seeding process
     fastapi-1    | INFO - Seeding completed successfully for location 1 and quantity 1000.0.
 
-Once these services are running, the FastAPI endpoints can be accessed at http://localhost:8000, and the treamlit front-end at http://localhost:8501
+Once these services are running, the FastAPI endpoints can be accessed at http://localhost:8000, and the streamlit frontend at http://localhost:8501.
 The FastAPI docker image interacts with a SQlite DB that gets initiated in be found at `/data/orders.db`, and can easily viewed through a GUI, e.g. https://sqlitebrowser.org/dl/
 
 FastAPI
 -------
 
-The FastAPI endpoints (designed in (weird_salads/README.rst)[https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst]) are shown below:
+An overview of the FastAPI endpoints (designed here: https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst) are shown below:
 
 .. image:: docs/misc/api_page.png
   :alt: API design
 
-The FastAPI is semi-complete, allowing various tasks, such as viewing and creating orders, updating (deducting) stock
+This is semi-complete, allowing various tasks, such as
+
+* Selling Items (POST `/order`)
+* Accepting Deliveries (POST `/inventory`)
+
+as these are the main tasks involved in the business.
+
+The other tasks such as taking stock can be completed through various endpoints (viewing inventory, updating), and the reports are better suited to the frontend.
 
 The working ordering system can be demonstrated by executing an order on http://localhost:8000/docs#/Order/create_order_order_post, say `menu_id = 18`,
 which will return a response, e.g.:
@@ -62,11 +69,10 @@ and can be verified at http://localhost:8000/docs#/Order/get_orders_order_get, e
 
 you can get more info on a certain menu at `/menu/`` and specific details on an item, including ingredients at `/menu/{item_id}`. For availability information, there is also the `/menu/{item_id}/availability` endpoint, that can be checked before and after a POST to the `/order` endpoint.
 
-
 Streamlit
 ---------
 
-The Streamlit backend is poor, with poor error handling (first time using streamlit, but chosen as a simple frontend), but has limited functionality:
+The Streamlit frontend is unfortunately poor (and it shows with the lack of reports/functionality). Particularly I struggled with the error handling (first time using streamlit, but chosen as a simple frontend).
 
 > The working ordering system can be demonstrated by clicking order, and checking the order reports page, which should have the UUID for the order.
 
@@ -80,21 +86,29 @@ The Streamlit backend is poor, with poor error handling (first time using stream
 Notes
 -----
 
-Positives:
-- I spent time on the first day designing the API/Database, and knew that I wanted to build on the repository pattern. I chose to priortise this to reduce the scope of the project and to get a better time estimate of how long it would take
-- I chose to prioritise seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
+**Positives:**
 
-Negatives:
-- I wish I had spent time properly writing unit/integration tests. This is the next thing I would do if I had time.
-- I would like to further understand how to implement a proper front-end with the error handling in technology such as React.
-- The handling of units in the deduction of ingredients is not complete, and was an oversight.
+* I spent time on the first day designing the API/Database, and knew that I wanted to build on the repository pattern. I chose to priortise this to reduce the scope of the project and to get a better time estimate of how long it would take
+* I chose to prioritise seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
 
-Summary:
-- Overall, I limited scope through fixing a location in the database seeding, and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app, to provide a complete app.
+**Negatives:**
 
-Further notes (outloud thoughts):
-- Docker: https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst
-- Database: https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst
+* I wish I had spent time properly writing unit/integration tests. This is the next thing I would do if I had time.
+* I would like to further understand how to implement a proper front-end with the error handling in technology such as React.
+* The handling of units in the deduction of ingredients is not complete, and was an oversight.
+
+**Summary:**
+
+Overall, I limited scope through:
+* fixing a location in the database seeding,
+* Primarily concentrating on Selling Orders and having Items delivered,
+* (and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app, to provide a complete app from the beginning.)
+
+**Further basic scratch notes:**
+
+* Docker: https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst
+* Database: https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst
+
 
 Developing
 ==========
