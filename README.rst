@@ -1,53 +1,49 @@
 Overview
 --------
 
-This Project provides a webapp and backend, with the backend built on Python and SQLite.
-The architecture is "hexagonal", with a repository pattern (+ Unit of Work pattern; `weird_salads/utils/unit_of_work.py`) for data access.
+This project provides a web app and backend, with the backend built on Python and SQLite. The architecture is "hexagonal", utilising a repository pattern (plus Unit of Work pattern; see `weird_salads/utils/unit_of_work.py`, or `https://github.com/PaulJWright/weird_salads/pull/7` for an overview of the initial Orders implementation) for data access.
 
-Initial design docs on the API/DB/Repo and technologies are in `weird_salads/README.rst` (https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst), but the repository is split into two services: Orders/Inventory. The integration of these is through HTTP requests, but other methods were considered
+Initial design documentation on the API, database, repository, and technologies can be found in the `weird_salads/README.rst` (`https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst`). The repository is split into two services: Orders and Inventory. Integration of these services occurs through HTTP requests, although other methods were considered.
 
 Start the Services
 ==================
 
-To get started, run the following (for a full breakdown, see `/docker/README.rst`)
+To get started, run the following commands (for a more complete breakdown, see `/docker/README.rst`):
 
-.. code:: bash
+.. code-block:: bash
 
     cd docker
     docker compose up --build
 
-Here, the docker-compose.yml defines the `location_id` and `quantity` that are used for seeding (`weird_salads/utils/database/seed_db.py`) the database from empty. This is done from `data/*.csv` files that are downloaded sheets from the Google Sheet doc provided.
-The following example during initialisation, shows that the seeding process is complete for location 1 (with a quantity of 1000 for each ingredient).
+Here, the `docker-compose.yml` file defines the `location_id` and `quantity` that are used for seeding the database from empty (`weird_salads/utils/database/seed_db.py`). This seeding is performed from `data/*.csv` files, which are downloaded sheets from the provided Google Sheet document. The following example during initialization shows that the seeding process is complete for location 1 with a quantity of 1000 for each ingredient.
 
-.. code:: bash
+.. code-block:: bash
 
     fastapi-1    | INFO - Starting data seeding process
     fastapi-1    | INFO - Seeding completed successfully for location 1 and quantity 1000.0.
 
-Once these services are running, the FastAPI endpoints can be accessed at http://localhost:8000, and the streamlit frontend at http://localhost:8501.
-The FastAPI docker image interacts with a SQlite DB that gets initiated in be found at `/data/orders.db`, and can easily viewed through a GUI, e.g. https://sqlitebrowser.org/dl/
+Once these services are running, the FastAPI endpoints can be accessed at `http://localhost:8000`, and the Streamlit frontend at `http://localhost:8501`. The FastAPI Docker container interacts with a SQLite database located at `/data/orders.db`, which can easily be viewed through a GUI, such as `https://sqlitebrowser.org/dl/`.
 
 FastAPI
--------
+=======
 
-An overview of the FastAPI endpoints (designed here: https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst) are shown below:
+An overview of the FastAPI endpoints (designed here: `https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst`) is shown below:
 
 .. image:: docs/misc/api_page.png
   :alt: API design
 
-This is semi-complete, allowing various tasks, such as
+This is semi-complete, allowing various tasks, such as:
 
-* Selling Items (POST `/order`)
-* Accepting Deliveries (POST `/inventory`)
+* Selling items (POST `/order`)
+* Accepting deliveries (POST `/inventory`)
 
-as these are the main tasks involved in the business.
+These are the primary tasks involved in the business.
 
-The other tasks such as taking stock can be completed through various endpoints (viewing inventory, updating), and the reports are better suited to the frontend.
+Other tasks, such as taking stock, can be completed through various endpoints (e.g. viewing inventory, updating), and reports are better suited to the frontend.
 
-The working ordering system can be demonstrated by executing an order on http://localhost:8000/docs#/Order/create_order_order_post, say `menu_id = 18`,
-which will return a response, e.g.:
+The working ordering system can be demonstrated by executing an order on `http://localhost:8000/docs#/Order/create_order_order_post`, for example `menu_id = 18`, which will return a response like:
 
-.. code:: bash
+.. code-block:: json
 
     {
         "menu_id": 18,
@@ -55,26 +51,27 @@ which will return a response, e.g.:
         "created": "2024-08-05T23:52:43.498404"
     }
 
-and can be verified at http://localhost:8000/docs#/Order/get_orders_order_get, e.g.:
+This can be verified at `http://localhost:8000/docs#/Order/get_orders_order_get`, for example:
 
-.. code:: bash
+.. code-block:: json
 
-            {
-        "menu_id": 18,
-        "id": "e893be34-b95e-4a94-8c46-9da9d2bca288",
-        "created": "2024-08-05T23:52:43.498404"
+    [
+        {
+            "menu_id": 18,
+            "id": "e893be34-b95e-4a94-8c46-9da9d2bca288",
+            "created": "2024-08-05T23:52:43.498404"
         }
     ]
-    }
 
-you can get more info on a certain menu at `/menu/`` and specific details on an item, including ingredients at `/menu/{item_id}`. For availability information, there is also the `/menu/{item_id}/availability` endpoint, that can be checked before and after a POST to the `/order` endpoint.
+You can get more information on a certain menu at `/menu/`, and specific details on an item, including ingredients, at `/menu/{item_id}`. For availability information, there is also the `/menu/{item_id}/availability` endpoint, which can be checked before and after a POST to the `/order` endpoint.
 
 Streamlit
----------
+=========
 
-The Streamlit frontend is unfortunately poor (and it shows with the lack of reports/functionality). Particularly I struggled with the error handling (first time using streamlit, but chosen as a simple frontend).
+The Streamlit frontend is unfortunately lacking in features, particularly in error handling, as this was my first time using Streamlit (chosen as a simple frontend solution).
+Simple fixes would be to propagate the errors properly from the API endpoints, and add filtering functionality to create the reports
 
-> The working ordering system can be demonstrated by clicking order, and checking the order reports page, which should have the UUID for the order.
+> The working ordering system can be demonstrated by clicking an order, and checking the order reports page, which should display the UUID for the order.
 
 .. image:: docs/misc/streamlit_menu.png
   :alt: Streamlit Menu
@@ -82,33 +79,35 @@ The Streamlit frontend is unfortunately poor (and it shows with the lack of repo
 .. image:: docs/misc/streamlit_orders_report.png
   :alt: Orders
 
-
 Notes
------
+=====
 
 **Positives:**
 
-* I spent time on the first day designing the API/Database, and knew that I wanted to build on the repository pattern. I chose to priortise this to reduce the scope of the project and to get a better time estimate of how long it would take
-* I chose to prioritise seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
+* I spent time on the first day designing the API and database, knowing that I wanted to build on the repository pattern. I chose to prioritise this to reduce the scope of the project and to get a better time estimate for completion.
+* I prioritised seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
 
 **Negatives:**
 
-* I wish I had spent time properly writing unit/integration tests. This is the next thing I would do if I had time.
-* I would like to further understand how to implement a proper front-end with the error handling in technology such as React.
-* The handling of units in the deduction of ingredients is not complete, and was an oversight.
+* I wish I had spent more time properly writing unit and integration tests. This is the next thing I would do if I had more time.
+* Type hinting and docstrings are incomplete, another thing I will do with more tmie.
+* I would like to further understand how to implement a proper frontend with error handling using a technology such as React.
+* The handling of units in the deduction of ingredients is not complete and was an oversight.
 
 **Summary:**
 
-Overall, I limited scope through:
-* fixing a location in the database seeding,
-* Primarily concentrating on Selling Orders and having Items delivered,
-* (and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app, to provide a complete app from the beginning.)
+Overall, I limited the scope through:
+
+* Fixing a location in the database seeding,
+* Primarily concentrating on selling orders and accepting deliveries,
+* Concentrating on merge requests that addressed end-to-end changes from the database through to the frontend app, to provide a complete app from the beginning.
 
 **Further basic scratch notes:**
 
-* Docker: https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst
-* Database: https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst
-
+* Docker: `https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst`
+* Database: `https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst`
+* API/Database/Repo: `https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst`
+* Initial OrdersService/OrdersRepository implementation: https://github.com/PaulJWright/weird_salads/pull/7
 
 Developing
 ==========
