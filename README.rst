@@ -4,7 +4,7 @@ Overview
 This Project provides a webapp and backend, with the backend built on Python and SQLite.
 The architecture is "hexagonal", with a repository pattern (+ Unit of Work pattern; `weird_salads/utils/unit_of_work.py`) for data access.
 
-* Notes on the API/DB design are at (weird_salads/README.rst)[https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst]
+Initial design docs on the API/DB/Repo and technologies are in `weird_salads/README.rst` (https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst), but the repository is split into two services: Orders/Inventory. The integration of these is through HTTP requests, but other methods were considered
 
 Start the Services
 ==================
@@ -16,7 +16,7 @@ To get started, run the following (for a full breakdown, see `/docker/README.rst
     cd docker
     docker compose up --build
 
-Here, the docker-compose.yml defines the `location_id` and `quantity` that are used for seeding (`weird_salads/utils/database/seed_db.py`) the database from empty.
+Here, the docker-compose.yml defines the `location_id` and `quantity` that are used for seeding (`weird_salads/utils/database/seed_db.py`) the database from empty. This is done from `data/*.csv` files that are downloaded sheets from the Google Sheet doc provided.
 The following example during initialisation, shows that the seeding process is complete for location 1 (with a quantity of 1000 for each ingredient).
 
 .. code:: bash
@@ -70,10 +70,10 @@ The Streamlit backend is poor, with poor error handling (first time using stream
 
 > The working ordering system can be demonstrated by clicking order, and checking the order reports page, which should have the UUID for the order.
 
-.. image:: docs/misc/streanlit_menu.png
+.. image:: docs/misc/streamlit_menu.png
   :alt: Streamlit Menu
 
-.. image:: docs/misc/streanlit_orders_report.png
+.. image:: docs/misc/streamlit_orders_report.png
   :alt: Orders
 
 
@@ -90,8 +90,11 @@ Negatives:
 - The handling of units in the deduction of ingredients is not complete, and was an oversight.
 
 Summary:
-- Overall, I limited scope through fixing a location in the database seeding, and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app.
+- Overall, I limited scope through fixing a location in the database seeding, and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app, to provide a complete app.
 
+Further notes (outloud thoughts):
+- Docker: https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst
+- Database: https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst
 
 Developing
 ==========
