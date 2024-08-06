@@ -1,6 +1,10 @@
 Overview
 --------
 
+This Project provides a webapp and backend, with the backend built on Python and SQLite.
+The architecture is "hexagonal", with a repository pattern (+ Unit of Work pattern; `weird_salads/utils/unit_of_work.py`) for data access.
+
+* Notes on the API/DB design are at (weird_salads/README.rst)[https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst]
 
 Start the Services
 ==================
@@ -12,15 +16,54 @@ To get started, run the following (for a full breakdown, see `/docker/README.rst
     cd docker
     docker compose up --build
 
-* FastAPI can be accessed at http://localhost:8000 (command line example below),
-* and Streamlit front-end at http://localhost:8501
+Here, the docker-compose.yml defines the `location_id` and `quantity` that are used for seeding (`weird_salads/utils/database/seed_db.py`) the database from empty.
+The following example during initialisation, shows that the seeding process is complete for location 1 (with a quantity of 1000 for each ingredient).
 
 .. code:: bash
 
-    curl -X 'GET' 'http://localhost:8000/order' -H 'accept: application/json'
-    {"orders":[]} # empty because the DB is empty
+    fastapi-1    | INFO - Starting data seeding process
+    fastapi-1    | INFO - Seeding completed successfully for location 1 and quantity 1000.0.
 
-The SQlite DB can be found at `/data/orders.db`, and can easily viewed through a GUI, e.g. https://sqlitebrowser.org/dl/
+Once these services are running, the FastAPI endpoints can be accessed at http://localhost:8000, and the treamlit front-end at http://localhost:8501
+The FastAPI docker image interacts with a SQlite DB that gets initiated in be found at `/data/orders.db`, and can easily viewed through a GUI, e.g. https://sqlitebrowser.org/dl/
+
+FastAPI
+-------
+
+The FastAPI endpoints (designed in (weird_salads/README.rst)[https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst]) are shown below:
+
+.. image:: docs/misc/api_page.png
+  :alt: API design
+
+The FastAPI is semi-complete, allowing various tasks, such as viewing and creating orders, updating (deducting) stock
+
+Streamlit
+---------
+
+The Streamlit backend is poor, with poor error handling (first time using streamlit, but chosen as a simple frontend), but has limited functionality:
+
+.. image:: docs/misc/streanlit_menu.png
+  :alt: API design
+
+.. image:: docs/misc/streanlit_orders_report.png
+  :alt: API design
+
+
+Notes
+-----
+
+Positives:
+- I spent time on the first day designing the API/Database, and knew that I wanted to build on the repository pattern. I chose to priortise this to reduce the scope of the project and to get a better time estimate of how long it would take
+- I chose to prioritise seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
+
+Negatives:
+- I wish I had spent time properly writing unit/integration tests. This is the next thing I would do if I had time.
+- I would like to further understand how to implement a proper front-end with the error handling in technology such as React.
+- The handling of units in the deduction of ingredients is not complete, and was an oversight.
+
+Summary:
+- Overall, I limited scope through fixing a location in the database seeding, and concentrated on MRs that addressed end-to-end changes from the DB through to the frontend app.
+
 
 Developing
 ==========
