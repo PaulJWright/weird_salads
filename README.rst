@@ -22,7 +22,7 @@ Here, the `docker-compose.yml` file defines the `location_id` and `quantity` tha
     fastapi-1    | INFO - Starting data seeding process
     fastapi-1    | INFO - Seeding completed successfully for location 1 and quantity 1000.0.
 
-Once these services are running, the FastAPI endpoints can be accessed at `http://localhost:8000`, and the Streamlit frontend at `http://localhost:8501`. The FastAPI Docker image interacts with a SQLite database located at `/data/orders.db`, which can easily be viewed through a GUI, such as `https://sqlitebrowser.org/dl/`.
+Once these services are running, the FastAPI endpoints can be accessed at `http://localhost:8000`, and the Streamlit frontend at `http://localhost:8501`. The FastAPI Docker container interacts with a SQLite database located at `/data/orders.db`, which can easily be viewed through a GUI, such as `https://sqlitebrowser.org/dl/`.
 
 FastAPI
 =======
@@ -39,7 +39,7 @@ This is semi-complete, allowing various tasks, such as:
 
 These are the primary tasks involved in the business.
 
-Other tasks, such as taking stock, can be completed through various endpoints (viewing inventory, updating), and reports are better suited to the frontend.
+Other tasks, such as taking stock, can be completed through various endpoints (e.g. viewing inventory, updating), and reports are better suited to the frontend.
 
 The working ordering system can be demonstrated by executing an order on `http://localhost:8000/docs#/Order/create_order_order_post`, for example `menu_id = 18`, which will return a response like:
 
@@ -69,6 +69,7 @@ Streamlit
 =========
 
 The Streamlit frontend is unfortunately lacking in features, particularly in error handling, as this was my first time using Streamlit (chosen as a simple frontend solution).
+Simple fixes would be to propagate the errors properly from the API endpoints, and add filtering functionality to create the reports
 
 > The working ordering system can be demonstrated by clicking an order, and checking the order reports page, which should display the UUID for the order.
 
@@ -83,12 +84,13 @@ Notes
 
 **Positives:**
 
-* I spent time on the first day designing the API and database, knowing that I wanted to build on the repository pattern. I chose to prioritize this to reduce the scope of the project and to get a better time estimate for completion.
-* I prioritized seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
+* I spent time on the first day designing the API and database, knowing that I wanted to build on the repository pattern. I chose to prioritise this to reduce the scope of the project and to get a better time estimate for completion.
+* I prioritised seeding the database with a certain location to reduce the handling of `staff` and `locations` tables.
 
 **Negatives:**
 
 * I wish I had spent more time properly writing unit and integration tests. This is the next thing I would do if I had more time.
+* Type hinting and docstrings are incomplete, another thing I will do with more tmie.
 * I would like to further understand how to implement a proper frontend with error handling using a technology such as React.
 * The handling of units in the deduction of ingredients is not complete and was an oversight.
 
@@ -104,6 +106,8 @@ Overall, I limited the scope through:
 
 * Docker: `https://github.com/PaulJWright/weird_salads/blob/main/docker/README.rst`
 * Database: `https://github.com/PaulJWright/weird_salads/blob/main/database/README.rst`
+* API/Database/Repo: `https://github.com/PaulJWright/weird_salads/blob/main/weird_salads/README.rst`
+* Initial OrdersService/OrdersRepository implementation: https://github.com/PaulJWright/weird_salads/pull/7
 
 Developing
 ==========
