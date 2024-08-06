@@ -37,16 +37,44 @@ The FastAPI endpoints (designed in (weird_salads/README.rst)[https://github.com/
 
 The FastAPI is semi-complete, allowing various tasks, such as viewing and creating orders, updating (deducting) stock
 
+The working ordering system can be demonstrated by executing an order on http://localhost:8000/docs#/Order/create_order_order_post, say `menu_id = 18`,
+which will return a response, e.g.:
+
+.. code:: bash
+
+    {
+        "menu_id": 18,
+        "id": "e893be34-b95e-4a94-8c46-9da9d2bca288",
+        "created": "2024-08-05T23:52:43.498404"
+    }
+
+and can be verified at http://localhost:8000/docs#/Order/get_orders_order_get, e.g.:
+
+.. code:: bash
+
+            {
+        "menu_id": 18,
+        "id": "e893be34-b95e-4a94-8c46-9da9d2bca288",
+        "created": "2024-08-05T23:52:43.498404"
+        }
+    ]
+    }
+
+you can get more info on a certain menu at `/menu/`` and specific details on an item, including ingredients at `/menu/{item_id}`. For availability information, there is also the `/menu/{item_id}/availability` endpoint, that can be checked before and after a POST to the `/order` endpoint.
+
+
 Streamlit
 ---------
 
 The Streamlit backend is poor, with poor error handling (first time using streamlit, but chosen as a simple frontend), but has limited functionality:
 
+> The working ordering system can be demonstrated by clicking order, and checking the order reports page, which should have the UUID for the order.
+
 .. image:: docs/misc/streanlit_menu.png
-  :alt: API design
+  :alt: Streamlit Menu
 
 .. image:: docs/misc/streanlit_orders_report.png
-  :alt: API design
+  :alt: Orders
 
 
 Notes
