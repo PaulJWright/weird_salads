@@ -10,4 +10,5 @@ global-exclude *.pyc *.o
 # and should not be included in built tarballs
 prune weird_salads/_dev
 prune streamlit_app
+prune database
 prune docker
